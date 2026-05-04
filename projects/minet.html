@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiNet Pharmacy Management System — Michael Arthur</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#data-storytelling">Data Storytelling</a></li>
+        <li><a href="../index.html#graphic-design">Graphic Design</a></li>
+        <li><a href="../index.html#information-design">Information Design</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html" class="back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to portfolio
+      </a>
+      <div class="project-hero-content">
+        <p class="project-category">Product Design</p>
+        <h1>MiNet Pharmacy Management System</h1>
+        <p class="project-subtitle">Web App + Mobile Companion + Cloud Infrastructure</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+      <img src="" alt="Expanded View" class="lightbox-img" id="lightbox-img">
+      <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="project-content" style="padding-top: 0;">
+    <div class="container">
+      <div class="project-grid" style="grid-template-columns: 1fr;">
+        <div class="project-gallery" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+          
+          <div class="gallery-item clickable">
+            <img src="../images/minet/m00.png" alt="Minet Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/minet/m1.png" alt="Minet Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/minet/m2.png" alt="Minet Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/minet/m3.png" alt="Minet Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/minet/m4.png" alt="Minet Design">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur. Designed with intention.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  
+  <script>
+    // Lightbox Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("lightbox-close");
+      const prevBtn = document.getElementById("lightbox-prev");
+      const nextBtn = document.getElementById("lightbox-next");
+      
+      const galleryItems = Array.from(document.querySelectorAll(".gallery-item.clickable img"));
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = galleryItems[currentIndex].src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      galleryItems.forEach((img, index) => {
+        img.parentElement.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+
+      // Close on background click
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+      });
+    });
+  </script>
+</body>
+</html>

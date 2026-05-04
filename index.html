@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Arthur — Information Designer & Data Storyteller</title>
+  <meta name="description"
+    content="Portfolio of Michael Arthur, Information Designer specializing in data visualization, public health communication, and visual storytelling.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon placeholder -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>✦</text></svg>">
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#data-storytelling">Data Storytelling</a></li>
+        <li><a href="#graphic-design">Graphic Design</a></li>
+        <li><a href="#information-design">Information Design</a></li>
+        <li><a href="#health-communication">Health Comm</a></li>
+        <li><a href="#product-design">Product Design</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO / ABOUT ===== -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Michael Arthur</h1>
+          <p class="tagline">I tell stories with data</p>
+          <p class="bio">
+            Information designer with expertise in public health communication, data visualization, and visual
+            storytelling. I translate complex datasets and research findings into clear, compelling narratives
+            that inform decision-making. My work sits at the intersection of data and design, making the invisible
+            visible, the complex understandable, and the abstract meaningful.
+          </p>
+          <div class="hero-actions">
+            <!-- UPDATE: link to your actual CV file -->
+            <a href="https://drive.google.com/file/d/13ryWgmqVNO1rOfXxxDBKQmXZeRDibXrn/view?usp=drive_link"
+              class="btn btn-primary" target="_blank">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 10v4H4v-4M8 2v9M5 8l3 3 3-3" />
+              </svg>
+              Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photos">
+          <!-- UPDATE: Replace placeholders with your actual photos -->
+          <div class="hero-photo">
+            <img src="images/about-me-1.jpeg" alt="Michael Arthur">
+          </div>
+          <div class="hero-photo">
+            <img src="images/about-me-2.jpeg" alt="At work">
+          </div>
+          <div class="hero-photo">
+            <img src="images/about-me-3.jpeg" alt="Speaking">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CATEGORY 1: DATA STORYTELLING ===== -->
+  <section class="section" id="data-storytelling">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Category 01</p>
+        <h2 class="section-title">Data Storytelling</h2>
+        <p class="section-intro">Interactive, scroll-driven narratives that translate complex public health data into
+          visual stories people can connect with and act on.</p>
+      </div>
+
+      <div class="card-grid stagger">
+
+        <!-- CARD 1: Heavy Weight on Small Shoulders -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/hwoss/hwoss-hero-1.jpeg" alt="Heavy Weight on Small Shoulders">
+            </div>
+            <div class="card-info">
+              <h3>Heavy Weight on Small Shoulders</h3>
+              <p>Master's Thesis — Scrollytelling Data Story</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                An interactive, scroll-driven web experience communicating the impact of Seasonal Malaria
+                Chemoprevention (SMC) in West Mamprusi Municipal, Ghana's North East Region. Combines watercolor
+                illustration, D3.js data visualizations (animated bar charts, isotype grids, mortality charts), and
+                culturally grounded comparisons to translate abstract health statistics for low-literacy audiences.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Research & Framework
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Built on the Approximate Number System (ANS) cognitive theory, Visual Rhetoric, Research through
+                    Design and Theory-Driven Design Research.
+                    The work combines these theories to make health
+                    statistics cognitively accessible without requiring numerical literacy.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/heavy-weight.html" class="card-image">
+                <img src="images/hwoss/hwoss-hero-1.jpeg" alt="Heavy Weight on Small Shoulders">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">D3.js</span>
+                <span class="tag">Scrollytelling</span>
+                <span class="tag">Public Health</span>
+                <span class="tag">Visual Rhetoric</span>
+                <span class="tag">GSAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Whispers of Wellness -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/wow/wow-hero.jpg" alt="Whispers of Wellness">
+            </div>
+            <div class="card-info">
+              <h3>Whispers of Wellness</h3>
+              <p>Data Storytelling</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                A data story using visual and narrative techniques to explore health and wellbeing themes. Demonstrates
+                how information design can be a tool for empathy, translating personal and public health data into
+                visual narratives that foster understanding and connection.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Design Approach
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Uses typography, color pacing, and visual metaphor to build narrative tension and emotional
+                    resonance. The design prioritizes reader engagement and accessibility, drawing on editorial design
+                    principles and data visualization best practices.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/whispers-of-wellness.html" class="card-image">
+                <img src="images/wow/wow-hero.jpg" alt="Whispers of Wellness">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">Data Visualization</span>
+                <span class="tag">Editorial Design</span>
+                <span class="tag">Health</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Meaningful Strides -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/ms/ms-2.jpg" alt="Meaningful Strides">
+            </div>
+            <div class="card-info">
+              <h3>Meaningful Strides: SMC in Sene West District</h3>
+              <p>Data Storytelling</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                A visual narrative exploring the progress of Seasonal Malaria Chemoprevention in Sene West District,
+                Ghana. Uses data-driven design to communicate public health intervention outcomes to diverse audiences —
+                from health workers to community members.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Data & Context
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Draws on district-level malaria surveillance data to track the impact of SMC across multiple
+                    implementation cycles. Visual comparisons and contextual framing make the data meaningful for
+                    audiences without statistical training.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/meaningful-strides.html" class="card-image">
+                <img src="images/ms/ms-2.jpg" alt="Meaningful Strides">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">Data Visualization</span>
+                <span class="tag">Public Health</span>
+                <span class="tag">SMC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CATEGORY 2: GRAPHIC DESIGN ===== -->
+  <section class="section section-alt" id="graphic-design">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Category 02</p>
+        <h2 class="section-title">Graphic Design</h2>
+        <p class="section-intro">Visual communication across print and digital — from event collateral and campaign
+          materials to editorial layouts and publication design.</p>
+      </div>
+
+      <div class="card-grid stagger">
+
+        <!-- CARD: Flyers & Posters -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/3338a3d9-48a5-4687-9b09-21f9a892f352_rw_600.jpg" alt="Flyers & Posters">
+            </div>
+            <div class="card-info">
+              <h3>Flyers & Posters</h3>
+              <p>Event Collateral, Campaigns, Announcements</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                A collection of flyers and posters designed for conferences, public health campaigns, organizational
+                events, and community outreach. Created for CLCD Ghana, NMEP, and academic settings — balancing visual
+                impact with clear information hierarchy.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Design Process
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Each piece begins with understanding the audience and communication goal. Designed in Adobe
+                    Illustrator and Photoshop, with attention to typography, color, and cultural appropriateness for
+                    diverse audiences across Ghana and academic contexts.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/flyers-posters.html" class="card-image">
+                <img src="images/36cc2f2d-f08b-4426-9640-ae3f77dffa72_rw_1200.jpg" alt="Flyers & Posters">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">Illustrator</span>
+                <span class="tag">Photoshop</span>
+                <span class="tag">Print</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD: Reports & Books -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/book-design/c-2.png" alt="Reports">
+            </div>
+            <div class="card-info">
+              <h3>Reports</h3>
+              <p>Publication Design, Editorial Layout</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                Report covers, book layouts, and editorial design for organizational publications. Work includes annual
+                reports, research summaries, and program documentation designed for both print and digital distribution.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Design Philosophy
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Long-form publications demand clear typographic hierarchy, restrained color use, and consistent
+                    layout grids. Each piece is designed to guide the reader through complex content while maintaining
+                    visual engagement across many pages.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/reports.html" class="card-image">
+                <img src="images/book-design/c-2.png" alt="Reports">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">Editorial</span>
+                <span class="tag">InDesign</span>
+                <span class="tag">Print</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CATEGORY 3: INFORMATION DESIGN ===== -->
+  <section class="section" id="information-design">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Category 03</p>
+        <h2 class="section-title">Information Design</h2>
+        <p class="section-intro">Making complex systems and data structures visible and navigable — through
+          infographics, diagrams, process flows, and data-informed visual systems.</p>
+      </div>
+
+      <div class="card-grid stagger">
+
+        <!-- CARD: Infographics & Data Visualizations -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/information-design/id-00.jpg" alt="Infographics & Data Visualizations">
+            </div>
+            <div class="card-info">
+              <h3>Infographics & Data Visualizations</h3>
+              <p>Conference Materials, Stakeholder Presentations</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                Infographics and data visualizations designed for conferences, stakeholder briefings, and public
+                communication. Work includes D3.js interactive charts, static ISOTYPE-style pictorial graphics, and
+                presentation-ready data summaries for health programs across Ghana.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Visualization Principles
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Grounded in Tamara Munzner's visualization theory and Giorgia Lupi's humanistic data philosophy.
+                    Each visualization begins with a clear question, selects the appropriate visual encoding, and
+                    prioritizes cognitive accessibility for the intended audience.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/infographics.html" class="card-image">
+                <img src="images/information-design/id-00.jpg" alt="Infographics & Data Visualizations">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">D3.js</span>
+                <span class="tag">ISOTYPE</span>
+                <span class="tag">Illustrator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD: UI/UX Design -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/ui/ui-1.png" alt="UI/UX Design">
+            </div>
+            <div class="card-info">
+              <h3>UI/UX Design</h3>
+              <p>Interface Design, Interaction Patterns</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                User interface designs for web and mobile applications. Work includes wireframes, high-fidelity mockups,
+                and interactive prototypes created in Figma and Adobe XD — with attention to information architecture,
+                usability, and visual consistency.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Design Approach
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Every interface begins with understanding user needs and constraints. Designs prioritize clarity,
+                    progressive disclosure, and accessibility — ensuring complex features remain approachable across
+                    technical skill levels.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/ui.html" class="card-image">
+                <img src="images/ui/ui-1.png" alt="UI/UX Design">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Adobe XD</span>
+                <span class="tag">Prototyping</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CATEGORY 4: HEALTH COMMUNICATION ===== -->
+  <section class="section section-alt" id="health-communication">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Category 04</p>
+        <h2 class="section-title">Health Communication</h2>
+        <p class="section-intro">Communication design for national health programs — newsletters, campaign materials,
+          and stakeholder engagement across Ghana's malaria and child development sectors.</p>
+      </div>
+
+      <div class="card-grid stagger">
+
+        <!-- CARD: NMEP Campaign Materials -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/nmep/n1.jpg" alt="NMEP Campaign Materials">
+            </div>
+            <div class="card-info">
+              <h3>NMEP Campaign Materials</h3>
+              <p>National Malaria Elimination Program, Ghana</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                Newsletters, infographics, and communication materials produced for Ghana's National Malaria Elimination
+                Program. Includes the 2021 Point Mass Distribution newsletter distributed across all 16 regions, and
+                visual summaries of SMC, ITN, and larval source management campaigns.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Scope & Reach
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Materials supported four concurrent national health campaigns and were distributed to regional
+                    health directorates, district offices, and community health teams across Ghana. The newsletter
+                    synthesized field data, programme updates, and stakeholder messages into a cohesive editorial
+                    format.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/nmep.html" class="card-image">
+                <img src="images/nmep/n1.jpg" alt="NMEP Campaign Materials">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">Newsletter</span>
+                <span class="tag">Public Health</span>
+                <span class="tag">National Scale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD: CLCD Communications -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/clcd/c1.jpg" alt="CLCD Ghana Communications">
+            </div>
+            <div class="card-info">
+              <h3>CLCD Ghana Communications</h3>
+              <p>Center for Learning and Childhood Development</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                Digital communications and visual identity work for CLCD Ghana — including Mailchimp newsletters to 800+
+                subscribers, social media content, conference materials, and website management. Maintained a consistent
+                voice and visual identity across all organizational outputs.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Channels & Outcomes
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Managed website (Squarespace), social media platforms, and email campaigns. Designed templates that
+                    balanced information density with visual clarity, and maintained stakeholder engagement through
+                    consistent, quality communications over four years.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/clcd.html" class="card-image">
+                <img src="images/clcd/c1.jpg" alt="CLCD Ghana Communications">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">Mailchimp</span>
+                <span class="tag">Social Media</span>
+                <span class="tag">Squarespace</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CATEGORY 5: PRODUCT DESIGN ===== -->
+  <section class="section" id="product-design">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Category 05</p>
+        <h2 class="section-title">Product Design</h2>
+        <p class="section-intro">End-to-end product thinking — from problem identification through system architecture
+          and UX design to deployed solutions.</p>
+      </div>
+
+      <div class="card-grid stagger">
+
+        <!-- CARD: MiNet Pharmacy Management System -->
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/minet/m00.png" alt="MiNet Pharmacy Management System">
+            </div>
+            <div class="card-info">
+              <h3>MiNet Pharmacy Management System</h3>
+              <p>Web App + Mobile Companion + Cloud Infrastructure</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                A complete pharmacy management ecosystem designed and directed from concept to production deployment.
+                The system includes a React web dashboard for inventory and sales management, a Flutter Android
+                companion app with real-time push notifications, and Firebase cloud infrastructure — all built to
+                operate reliably in a low-connectivity rural environment.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Design & Development Process
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    Identified operational pain points in my own pharmacy, defined product requirements, designed UX
+                    flows and information architecture, and directed AI-assisted development to build and ship the full
+                    system. Now used daily in a production environment at Minet Medicines Pharmacy, Anyinam, Eastern
+                    Region, Ghana.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/minet.html" class="card-image">
+                <img src="images/minet/m00.png" alt="MiNet Pharmacy Management System">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">React</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Product Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-intro">Open to opportunities in data visualization, information design, health communication,
+          and visual storytelling — remote or on-site.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <a href="mailto:arthurmichael72@gmail.com" class="contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m2 4 10 8 10-8" />
+          </svg>
+          <h4>Email</h4>
+          <p>arthurmichael72@gmail.com</p>
+        </a>
+        <a href="tel:+12369909552" class="contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <h4>Phone</h4>
+          <p>+1 (236) 990-9552</p>
+        </a>
+        <div class="contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <h4>Location</h4>
+          <p>New Westminster, BC, Canada</p>
+        </div>
+        <!-- UPDATE: Add your LinkedIn or other social links -->
+        <a href="https://arthurmichael.myportfolio.com/" target="_blank" class="contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+          </svg>
+          <h4>Portfolio</h4>
+          <p>arthurmichael.myportfolio.com</p>
+        </a>
+        <a href="https://www.linkedin.com/in/arthurmic/" target="_blank" class="contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          <h4>LinkedIn</h4>
+          <p>linkedin.com/in/arthurmic</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur. Designed with intention.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

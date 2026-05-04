@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Design: Reports — Michael Arthur</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#data-storytelling">Data Storytelling</a></li>
+        <li><a href="../index.html#graphic-design">Graphic Design</a></li>
+        <li><a href="../index.html#information-design">Information Design</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#graphic-design" class="back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to portfolio
+      </a>
+      <div class="project-hero-content">
+        <p class="project-category">Graphic Design</p>
+        <h1>Reports</h1>
+        <p class="project-subtitle">Publication Design, Editorial Layout</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+      <img src="" alt="Expanded View" class="lightbox-img" id="lightbox-img">
+      <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="project-content" style="padding-top: 0;">
+    <div class="container">
+      <div class="project-grid" style="grid-template-columns: 1fr;">
+        <div class="project-gallery" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+          
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/052f63b2-3beb-4c6e-941e-5955344c659d_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/20581b90-d861-4e02-ba0e-f04303f25750_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/2062e96e-1e8f-47b0-8c9d-042b36391a95_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/2268472d-8fab-4d26-b85c-f89833b4698a_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/39ab66a9-3e94-43c4-be5c-d2cdcf119057_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/3cf76cdc-9c89-424f-9d31-e74efceb8803_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/4e04d345-79c8-4f77-9765-912201b2a0f9_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/544018e2-b3b6-4ac3-80b6-d527a7967fc9_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/662cbb10-e89b-420d-ad65-86e90db24112_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/80eec269-9189-4fcb-90a3-31ff6326b89a_rw_600.jpg" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/ab2f3a28-eba3-449a-8251-93d176869a49_rw_600.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/c-1.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/c-2.png" alt="Report Design">
+          </div>
+          <div class="gallery-item clickable">
+            <img src="../images/book-design/c-3.png" alt="Report Design">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur. Designed with intention.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  
+  <script>
+    // Lightbox Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("lightbox-close");
+      const prevBtn = document.getElementById("lightbox-prev");
+      const nextBtn = document.getElementById("lightbox-next");
+      
+      const galleryItems = Array.from(document.querySelectorAll(".gallery-item.clickable img"));
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = galleryItems[currentIndex].src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      galleryItems.forEach((img, index) => {
+        img.parentElement.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+
+      // Close on background click
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+      });
+    });
+  </script>
+</body>
+</html>
