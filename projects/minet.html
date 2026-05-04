@@ -50,26 +50,149 @@
     </div>
   </div>
 
-  <!-- GALLERY -->
-  <section class="project-content" style="padding-top: 0;">
+  <!-- PROJECT CONTENT -->
+  <section class="project-content">
     <div class="container">
-      <div class="project-grid" style="grid-template-columns: 1fr;">
-        <div class="project-gallery" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
-          
-          <div class="gallery-item clickable">
-            <img src="../images/minet/m00.png" alt="Minet Design">
+      <div class="project-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="project-meta">
+          <div class="meta-block">
+            <h4>Role</h4>
+            <p>Designer, Product Owner, Director of Development</p>
           </div>
-          <div class="gallery-item clickable">
-            <img src="../images/minet/m1.png" alt="Minet Design">
+          <div class="meta-block">
+            <h4>Timeline</h4>
+            <p>2026 – Present (ongoing iteration)</p>
           </div>
-          <div class="gallery-item clickable">
-            <img src="../images/minet/m2.png" alt="Minet Design">
+          <div class="meta-block">
+            <h4>Tools & Technologies</h4>
+            <p>AI-Assisted Development<br>
+            React (Web Dashboard)<br>
+            Flutter (Android Companion App)<br>
+            Firebase: Firestore, Authentication, Cloud Functions, Cloud Messaging<br>
+            Product Design & UX Architecture</p>
           </div>
-          <div class="gallery-item clickable">
-            <img src="../images/minet/m3.png" alt="Minet Design">
-          </div>
-          <div class="gallery-item clickable">
-            <img src="../images/minet/m4.png" alt="Minet Design">
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="project-body">
+          <h2>Overview</h2>
+          <p>
+            MiNet PMS is a pharmacy management ecosystem I designed and built for Minet Medicines Pharmacy, my community pharmacy in Anyinam, Eastern Region, Ghana. The system addresses a specific operational problem: managing inventory, tracking sales, and maintaining real-time oversight of a pharmacy in a rural, low-connectivity environment — without relying on expensive commercial software designed for larger urban operations.
+          </p>
+          <p>
+            The result is a three-part system — a web dashboard, a mobile companion app, and cloud infrastructure — working together to give me full operational visibility whether I'm on-site or thousands of miles away.
+          </p>
+
+          <h2>The Problem</h2>
+          <p>
+            Running a community pharmacy in rural eastern Ghana comes with challenges that off-the-shelf pharmacy software doesn't account for. Internet connectivity is intermittent. Power outages are routine. The staff operating the system have varying levels of technical comfort. And commercial pharmacy management tools are priced for urban chains, not single-location community pharmacies serving a local population.
+          </p>
+          <p>
+            Before MiNet PMS, inventory tracking was manual, sales records were paper-based, and I had no way to monitor operations remotely — a critical gap when I was studying in Vancouver while the pharmacy continued operating in Anyinam.
+          </p>
+
+          <h2>The Solution</h2>
+          <p>
+            I designed MiNet PMS as a three-component ecosystem:
+          </p>
+          <ul>
+            <li><strong>MiNet PMS Web Dashboard (React)</strong>: The primary interface, running on a Mac at the pharmacy. Handles inventory management, sales recording, stock alerts, and daily reporting. Designed for the staff member operating it — with large touch targets, minimal navigation depth, and clear visual feedback for every action.</li>
+            <li><strong>MiNet Live Mobile App (Flutter / Android)</strong>: A companion app installed on a Samsung Tab A9 at the pharmacy and on my personal phone. Receives real-time push notifications for every new sale, provides a mobile view of inventory and daily summaries, and allows me to monitor operations from anywhere.</li>
+            <li><strong>Firebase Cloud Backend</strong>: The infrastructure connecting everything: Firestore for real-time database sync, Firebase Authentication for secure access, Cloud Functions for server-side logic (stock threshold alerts, daily summaries), and Firebase Cloud Messaging (FCM) for push notifications. Running on Firebase's Blaze plan with project ID minet-live.</li>
+          </ul>
+
+          <h2>Design Process</h2>
+          <p>
+            This project started with a problem, not a technology choice. I mapped out the daily workflow at the pharmacy — what the staff does from opening to closing, where friction points exist, what information I need remotely, and what would break if connectivity dropped.
+          </p>
+          <p>
+            From that mapping, I defined the core requirements:
+          </p>
+          <ul>
+            <li>Sales must be recordable even during internet outages (offline-first)</li>
+            <li>I need to know about every sale in real time when connectivity exists</li>
+            <li>Stock levels must trigger alerts before items run out</li>
+            <li>The interface must be usable by someone with limited tech experience</li>
+            <li>The system must run on hardware we already own</li>
+          </ul>
+          <p>
+            I then designed the UX flows on paper — screen-by-screen, interaction-by-interaction — before directing the development process. The entire system was built using AI-assisted development tools, with me serving as the product designer and director: defining what to build, how it should work, and what the experience should feel like, then guiding the AI through implementation, testing, and iteration.
+          </p>
+
+          <h2>Key Design Decisions</h2>
+          <ul>
+            <li><strong>Offline-first architecture</strong>: Sales and inventory changes are written to a local cache first, then synced to Firestore when connectivity returns. This means the pharmacy never stops functioning because of an internet outage.</li>
+            <li><strong>Push notifications as a management layer</strong>: Rather than requiring me to check a dashboard, the system pushes every sale to my phone. This passive monitoring model means I'm always aware without actively watching.</li>
+            <li><strong>Minimal navigation depth</strong>: The web dashboard uses a single-level navigation structure. The most common actions — recording a sale, checking stock, viewing today's summary — are all one tap from the home screen.</li>
+            <li><strong>Familiar visual language</strong>: The interface uses clear labels, large text, and color-coded status indicators (green for in-stock, amber for low, red for out-of-stock) rather than abstract icons or technical terminology.</li>
+          </ul>
+
+          <h2>Technical Architecture</h2>
+          <pre><code>
+┌─────────────────────────────────────────────────┐
+│                  Firebase Cloud                  │
+│  ┌───────────┐  ┌──────────┐  ┌──────────────┐  │
+│  │ Firestore │  │   Auth   │  │   Cloud Fn   │  │
+│  │  (Real-   │  │ (Secure  │  │  (Alerts,    │  │
+│  │  time DB) │  │  Access) │  │  Summaries)  │  │
+│  └─────┬─────┘  └────┬─────┘  └──────┬───────┘  │
+│        │              │               │          │
+│        └──────────┬───┘        ┌──────┘          │
+│                   │            │ FCM Push        │
+└───────────────────┼────────────┼─────────────────┘
+                    │            │
+        ┌───────────┴──┐   ┌────┴───────────┐
+        │  MiNet PMS   │   │  MiNet Live    │
+        │  Web App     │   │  Mobile App    │
+        │  (React)     │   │  (Flutter)     │
+        │              │   │                │
+        │  Mac @ Shop  │   │  Tab A9 + My   │
+        │              │   │  Phone         │
+        └──────────────┘   └────────────────┘
+          </code></pre>
+
+          <h2>Outcome</h2>
+          <p>
+            MiNet PMS has been in daily production use at the pharmacy since deployment. Key outcomes:
+          </p>
+          <ul>
+            <li>Zero downtime during internet or power interruptions, thanks to offline-first design</li>
+            <li>Real-time remote monitoring — I receive push notifications for every transaction, giving me full visibility from Vancouver</li>
+            <li>Reduced stock-outs — automated threshold alerts flag low inventory before items run out</li>
+            <li>Staff adoption — the simplified interface required minimal training; the staff member operating it was comfortable within the first day</li>
+          </ul>
+
+          <h2>What This Project Demonstrates</h2>
+          <p>
+            This wasn't a theoretical exercise or a class project. It's a real system solving a real problem in a real business — one I own and operate. It demonstrates:
+          </p>
+          <ul>
+            <li><strong>Product thinking</strong>: Identifying a genuine operational problem, defining requirements from user workflows, and designing a system that addresses the actual constraints (connectivity, literacy, hardware, cost)</li>
+            <li><strong>Systems design</strong>: Architecting a multi-platform ecosystem where web, mobile, and cloud components work together seamlessly</li>
+            <li><strong>UX for constrained environments</strong>: Designing for intermittent connectivity, non-technical users, and hardware limitations</li>
+            <li><strong>AI-assisted development as a design tool</strong>: Using AI not as a black box, but as a collaborator — directing the build process while maintaining ownership of every product and design decision</li>
+            <li><strong>Shipping and iterating</strong>: Getting a functional system into daily production use and refining it based on real-world feedback</li>
+          </ul>
+
+          <!-- GALLERY -->
+          <div class="project-gallery">
+            <div class="gallery-item clickable">
+              <img src="../images/minet/m00.png" alt="Minet Design">
+            </div>
+            <div class="gallery-item clickable">
+              <img src="../images/minet/m1.png" alt="Minet Design">
+            </div>
+            <div class="gallery-item clickable">
+              <img src="../images/minet/m2.png" alt="Minet Design">
+            </div>
+            <div class="gallery-item clickable">
+              <img src="../images/minet/m3.png" alt="Minet Design">
+            </div>
+            <div class="gallery-item clickable">
+              <img src="../images/minet/m4.png" alt="Minet Design">
+            </div>
           </div>
 
         </div>
