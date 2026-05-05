@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae — Michael Arthur</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .cv-section {
+      padding: 100px 0 60px;
+    }
+    .cv-header {
+      margin-bottom: 60px;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 30px;
+    }
+    .cv-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+    .cv-header .subtitle {
+      font-size: 1.2rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .cv-contact a {
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition-fast);
+    }
+    .cv-contact a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    .cv-block {
+      margin-bottom: 48px;
+    }
+    .cv-block h2 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary-dark);
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+    .cv-item {
+      margin-bottom: 32px;
+    }
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .cv-item-header h3 {
+      font-size: 1.15rem;
+      margin: 0;
+    }
+    .cv-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .cv-organization {
+      color: var(--primary);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .cv-list {
+      padding-left: 20px;
+      color: var(--text-main);
+    }
+    .cv-list li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .cv-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+    }
+    .cv-skill-group h4 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .cv-skill-group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .cv-skill-group li {
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+    .cv-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      transition: var(--transition-base);
+      margin-top: 16px;
+    }
+    .cv-download-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    .cv-reference {
+      margin-bottom: 24px;
+    }
+    .cv-reference h4 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .cv-reference p {
+      margin: 2px 0;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#data-storytelling">Data Storytelling</a></li>
+        <li><a href="index.html#graphic-design">Graphic Design</a></li>
+        <li><a href="index.html#information-design">Information Design</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CV CONTENT -->
+  <section class="cv-section">
+    <div class="container" style="max-width: 900px;">
+      
+      <div class="cv-header">
+        <h1>MICHAEL ARTHUR</h1>
+        <div class="subtitle">Information Designer & Data Storyteller</div>
+        <div class="cv-contact">
+          <a href="mailto:arthurmichael72@gmail.com">arthurmichael72@gmail.com</a>
+          <span>|</span>
+          <span>+1 (236) 990-9552</span>
+          <span>|</span>
+          <span>New Westminster, BC, Canada</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1I7bLC2SusoGZJjvZOUgXAEoI9Gk7lojK/view?usp=sharing" target="_blank" class="cv-download-btn">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+          </svg>
+          Download PDF
+        </a>
+      </div>
+
+      <div class="cv-block">
+        <h2>Profile</h2>
+        <p>Information designer with expertise in public health communication, data visualization, and visual storytelling. Skilled at translating complex datasets and research findings into clear, culturally grounded narratives that inform decision-making. Experienced in supporting national-scale health interventions across Ghana, with a Master's-level foundation in information design and participatory research methods.</p>
+      </div>
+
+      <div class="cv-block">
+        <h2>Education</h2>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3>MS, Information Design and Data Visualization</h3>
+            <span class="cv-date">2024 – 2026</span>
+          </div>
+          <div class="cv-organization">Northeastern University, Vancouver Campus</div>
+          <p>Thesis: Communicating health data to low-literacy communities — a framework for Seasonal Malaria Chemoprevention (SMC) in northern Ghana. Coursework in data visualization, visual rhetoric, interaction design, and research methods.</p>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h2>Experience</h2>
+        
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3>Information Design & Training Specialist</h3>
+            <span class="cv-date">2019 – 2023</span>
+          </div>
+          <div class="cv-organization">National Malaria Elimination Program (NMEP), Ghana</div>
+          <ul class="cv-list">
+            <li>Trained over 200 facilitators across 15 of Ghana's 16 regions on three modules of the Ghana Malaria Interventions System (SICApp, NETApp, NET4SCHs), enabling digital tracking of national malaria interventions</li>
+            <li>Designed flowcharts, presentation slides, and troubleshooting guides used to onboard regional facilitators and community-level end users</li>
+            <li>Produced and distributed a national newsletter documenting the 2021 Point Mass Distribution of mosquito nets across all regions of Ghana</li>
+            <li>Supported campaigns spanning Seasonal Malaria Chemoprevention (7 regions), insecticide-treated net distribution, larval source management, and school net distribution programs</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3>Graphic Designer & Communications Administrator</h3>
+            <span class="cv-date">2020 – Sept. 2024</span>
+          </div>
+          <div class="cv-organization">Center for Learning and Childhood Development (CLCD), Ghana</div>
+          <ul class="cv-list">
+            <li>Managed the organization's website and social media platforms, growing consistent public engagement with CLCD's mission and programs</li>
+            <li>Designed infographics, flyers, posters, and presentation materials for conferences and stakeholder events</li>
+            <li>Created and disseminated monthly newsletters via Mailchimp to a mailing list of 800+ stakeholders and partners</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3>Co-Founder</h3>
+            <span class="cv-date">Ongoing</span>
+          </div>
+          <div class="cv-organization">Minet Medicines, Anyinam, Eastern Region, Ghana</div>
+          <ul class="cv-list">
+            <li>Conceptualized and directed the development of a custom pharmacy management ecosystem (web app, Android companion app, cloud infrastructure with real-time sync and push notifications) using AI-assisted development tools</li>
+            <li>Manage day-to-day operations including inventory, compliance, and customer service in a rural community setting</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h2>Selected Projects</h2>
+        
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3>Heavy Weight on Small Shoulders</h3>
+          </div>
+          <div class="cv-organization">Master's Thesis — Scrollytelling Data Story</div>
+          <p>An interactive, scroll-driven web experience communicating the impact of Seasonal Malaria Chemoprevention in West Mamprusi, Ghana. Combines watercolor illustration, D3.js data visualizations (animated bar charts, isotype grids, mortality charts), and culturally grounded comparisons to translate abstract health statistics for low-literacy audiences. Built on a Cultural-Visual-Participatory (CVP) framework drawing on ANS cognitive theory, Visual Rhetoric, Research through Design and Theory-Driven Research.</p>
+          <a href="projects/heavy-weight.html" class="cv-organization" style="display:inline-block; margin-top:8px;">View project &rarr;</a>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3>Meaningful Strides: SMC in Sene West District</h3>
+          </div>
+          <div class="cv-organization">Data Storytelling</div>
+          <p>A visual narrative exploring the progress of Seasonal Malaria Chemoprevention in Sene West District, using data-driven design to communicate public health outcomes to diverse audiences.</p>
+          <a href="projects/meaningful-strides.html" class="cv-organization" style="display:inline-block; margin-top:8px;">View project &rarr;</a>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h3>Whispers of Wellness</h3>
+          </div>
+          <div class="cv-organization">Data Storytelling</div>
+          <p>A data story using visual and narrative techniques to explore health and wellbeing themes, demonstrating information design as a tool for empathy and public understanding.</p>
+          <a href="projects/whispers.html" class="cv-organization" style="display:inline-block; margin-top:8px;">View project &rarr;</a>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h2>Skills & Tools</h2>
+        <div class="cv-skills-grid">
+          <div class="cv-skill-group">
+            <h4>Data Visualization</h4>
+            <ul>
+              <li>D3.js</li>
+              <li>Chart.js</li>
+              <li>ArcGIS StoryMaps</li>
+              <li>Statistics & Analytics</li>
+              <li>Storytelling with Data</li>
+            </ul>
+          </div>
+          <div class="cv-skill-group">
+            <h4>Web & Development</h4>
+            <ul>
+              <li>HTML / CSS</li>
+              <li>React</li>
+              <li>Scrollytelling</li>
+              <li>Squarespace</li>
+              <li>AI-Assisted Development</li>
+            </ul>
+          </div>
+          <div class="cv-skill-group">
+            <h4>Design</h4>
+            <ul>
+              <li>Adobe Illustrator</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe XD</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="cv-skill-group">
+            <h4>Communication</h4>
+            <ul>
+              <li>Information Design</li>
+              <li>Visual Rhetoric</li>
+              <li>Newsletter Design (Mailchimp)</li>
+              <li>Videography (Premiere Pro)</li>
+            </ul>
+          </div>
+          <div class="cv-skill-group">
+            <h4>Productivity</h4>
+            <ul>
+              <li>Microsoft Office Suite</li>
+              <li>Google Workspace</li>
+            </ul>
+          </div>
+          <div class="cv-skill-group">
+            <h4>Domain Expertise</h4>
+            <ul>
+              <li>Public Health Communication</li>
+              <li>Malaria Interventions (SMC, ITN)</li>
+              <li>Cross-Cultural Design</li>
+              <li>Low-Literacy Audience Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h2>Conferences & Talks</h2>
+        <ul class="cv-list" style="list-style: none; padding-left: 0;">
+          <li><strong>Data Visualization in Practice</strong> — Northeastern University, College of Arts, Media and Design, Vancouver. March 2025</li>
+          <li><strong>Designing Data Fluencies</strong> — IDDV Talks, Vancouver. February 2025</li>
+          <li><strong>Data Journalism: A Conversation with Francesca Fionda and Jens von Bergmann</strong> — Vancouver. November 2024</li>
+          <li><strong>GIS Day Online</strong> — Northeastern University. November 2024</li>
+        </ul>
+      </div>
+
+      <div class="cv-block">
+        <h2>References</h2>
+        <div class="cv-reference">
+          <h4>J. Fiifi Esseku, PhD</h4>
+          <p>Senior Lecturer / Ag. HoD, Graphic Design Department, University of Education, Winneba</p>
+          <p>+233 20 453 4764 | jfesseku@uew.edu.gh</p>
+        </div>
+        <div class="cv-reference">
+          <h4>Kwame Sakyi, PhD</h4>
+          <p>Director, Center for Learning and Childhood Development, Ghana</p>
+          <p>+(614) 804-5067 | ksakyi@oakland.edu</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur. Designed with intention.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
