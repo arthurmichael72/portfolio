@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RehabTrack — Pediatric Rehabilitation EMR — Michael Arthur</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .arch {
+      background: #0c211f;
+      color: #cfe6e0;
+      border-radius: 12px;
+      padding: 26px;
+      overflow-x: auto;
+      margin: 24px 0;
+      box-shadow: 0 20px 40px -28px rgba(11,93,84,.6);
+    }
+    .arch pre {
+      margin: 0;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12.5px;
+      line-height: 1.5;
+      white-space: pre;
+      color: #bfe3db;
+    }
+    .arch .hl {
+      color: #63d6c2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#data-storytelling">Data Storytelling</a></li>
+        <li><a href="../index.html#graphic-design">Graphic Design</a></li>
+        <li><a href="../index.html#information-design">Information Design</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#product-design" class="back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to portfolio
+      </a>
+      <div class="project-hero-content">
+        <p class="project-category">Product Design</p>
+        <h1>RehabTrack — Pediatric Rehabilitation EMR</h1>
+        <p class="project-subtitle">Offline-First PWA + Multidisciplinary Clinical Backend + Encrypted Cloud Backup</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT HERO IMAGE -->
+  <section class="project-hero-image" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="project-image-full gallery-item clickable">
+        <img src="../images/product-design/rehabtrack/rehabtrack-0.png" alt="RehabTrack sign-in screen" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center; letter-spacing: 0.02em;">Sign-in — offline-first pediatric rehabilitation EMR for CLCD Ghana</p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+      <img src="" alt="Expanded View" class="lightbox-img" id="lightbox-img">
+      <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- PROJECT CONTENT -->
+  <section class="project-content">
+    <div class="container">
+      <div class="project-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="project-meta">
+          <div class="meta-block">
+            <h4>Role</h4>
+            <p>Product Designer, Systems Architect, Development Director</p>
+          </div>
+          <div class="meta-block">
+            <h4>Client</h4>
+            <p>CLCD Ghana — Cerebral Palsy Therapies on Wheels</p>
+          </div>
+          <div class="meta-block">
+            <h4>Timeline</h4>
+            <p>2026 – Present (ongoing iteration)</p>
+          </div>
+          <div class="meta-block">
+            <h4>Tools & Technologies</h4>
+            <p>AI-Assisted Development<br>
+            React + TypeScript + Vite (Installable PWA)<br>
+            Tailwind CSS<br>
+            Supabase: Postgres, Auth, Row-Level Security, Edge Functions<br>
+            IndexedDB / Dexie (offline cache & write queue)<br>
+            Recharts (reporting)<br>
+            Product Design & UX Architecture</p>
+          </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="project-body">
+          <h2>Overview</h2>
+          <p>RehabTrack is an offline-first electronic medical record (EMR) I designed and directed for <strong>CLCD Ghana — Cerebral Palsy Therapies on Wheels</strong>, a mobile clinic program that delivers pediatric rehabilitation therapy to children with cerebral palsy across communities in Ghana. The system addresses a specific clinical problem: coordinating a multidisciplinary care team around a single child — and keeping accurate, signable clinical records — in field settings where internet connectivity is unreliable or absent.</p>
+          <p>The result is a single progressive web app that installs on the tablets clinicians carry into the field, works fully offline, and syncs to a permission-controlled cloud backend when a connection returns. It gives therapists a shared view of each child's goals and progress, gives administrators oversight and an audit trail, and gives the organization a documented, ownership-agnostic system it can run and hand off itself.</p>
+
+          <h2>The Problem</h2>
+          <p>Delivering therapy "on wheels" means the work happens where the children are — in homes, schools, and community sites — not in a clinic with stable Wi-Fi. Any records tool that assumes a live connection fails the moment the team drives out of range.</p>
+          <p>Pediatric CP rehabilitation is also inherently multidisciplinary. One child is seen by physiotherapy, occupational therapy, speech, mental health, and nutrition — each discipline setting its own goals and writing its own notes, but all working toward one shared care plan. Off-the-shelf EMRs are built around single-clinician encounters and urban infrastructure; they don't model shared, discipline-scoped care, and they aren't priced or shaped for a small nonprofit program.</p>
+          <p>Before RehabTrack, coordination lived in paper files and spreadsheets: progress was hard to see across disciplines, clinical notes weren't reliably signed, re-assessments slipped, and there was no safe, automatic backup of sensitive children's health data.</p>
+
+          <h2>The Solution</h2>
+          <p>I designed RehabTrack as one installable app backed by a permission-aware cloud service, structured around three layers:</p>
+          <ul>
+            <li><strong>RehabTrack PWA (React + TypeScript)</strong>: The single interface for the whole team, installable on Android tablets and desktop browsers. Seven modules — Dashboard, Patients, Evaluations, Care Plan, Sessions, Reports, and Admin — all reading and writing through a local cache so the app is fully usable with no connection.</li>
+            <li><strong>Supabase Backend (Postgres + Row-Level Security)</strong>: The source of truth. Row-Level Security enforces scope-of-practice in the database itself: therapists edit only records in their own discipline and can view the rest; administrators see everything. Every write is captured in an audit log.</li>
+            <li><strong>Offline & Backup Infrastructure</strong>: An IndexedDB/Dexie cache with a write queue that syncs on reconnect, plus a scheduled Edge Function that exports the database nightly, encrypts it, and stores dated copies in Google Drive with a configurable retention window.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/rehabtrack/rehabtrack-1.png" alt="RehabTrack Dashboard with KPI cards" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Dashboard — precise KPIs separating goals achieved from average progress</p>
+          </div>
+
+          <h2>Design Process</h2>
+          <p>This project started from clinical workflow, not from a feature list. I mapped how a child moves through the program — intake and registration, evaluation, a multidisciplinary care plan, recurring therapy sessions, progress tracking, and periodic re-assessment — and asked at each step: who is allowed to do this, what has to survive an outage, and what has to be legally defensible.</p>
+          <p>From that mapping I set the core requirements:</p>
+          <ul>
+            <li>Every core screen must read and write offline, then reconcile when connectivity returns</li>
+            <li>Permissions must reflect real scope of practice — a therapist can't edit another discipline's clinical notes</li>
+            <li>Session notes must be signable, with a clear draft-versus-signed state and a full audit trail</li>
+            <li>The interface must be usable on a tablet in the field by clinicians, not just at a desk</li>
+            <li>Sensitive children's health data must be backed up automatically and recoverably</li>
+            <li>The organization must be able to own, run, and hand off the system without depending on me</li>
+          </ul>
+          <p>I designed the module structure, screens, and interaction flows, then directed the build with AI-assisted development tools — serving as product designer and director, defining what to build and how each interaction should behave, and driving the work in reviewable stages so each module was verified before the next was built on top of it.</p>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/rehabtrack/rehabtrack-3.png" alt="RehabTrack new patient registration wizard" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Patient registration — a guided, multi-step intake flow</p>
+          </div>
+
+          <h2>Key Design Decisions</h2>
+          <ul>
+            <li><strong>Offline-first, not offline-tolerant</strong>: The local cache is the primary read source and writes go through a queue, so the app behaves identically in a connected clinic and a disconnected home visit. A persistent header indicator makes state honest — Synced, Syncing, or Offline — so no one is unsure whether their note has left the tablet.</li>
+            <li><strong>Discipline-scoped permissions in the data layer</strong>: Scope of practice is enforced by Row-Level Security in Postgres, not just hidden in the UI. Edit-versus-view affordances follow the same rules, so what a clinician can see and what they can change always match their role and discipline.</li>
+            <li><strong>Signable clinical records</strong>: Sessions use structured SOAP notes (Subjective, Objective, Assessment, Plan) with a Draft/Signed state and an e-signature capturing the signer's name, credential, and timestamp. Pending signatures surface on the dashboard and in Admin so nothing sits unsigned.</li>
+            <li><strong>Honest about clinical scoring</strong>: Instruments like GMFM-88 carry real scoring methodology I wasn't going to fabricate. Evaluations store raw, maximum, percentage, and notes generically, and any instrument-specific scoring is explicitly flagged as pending therapist confirmation rather than invented. Getting the clinical math right is CLCD's call, and the system is designed to defer to them.</li>
+            <li><strong>Precise metrics over flattering ones</strong>: The dashboard deliberately separates "goals achieved (N of M)" from "average goal progress (%)," so steady progress on long-term goals never reads as failure just because few are marked complete. Information design here is a clinical-morale decision.</li>
+            <li><strong>Culturally grounded, calm visual language</strong>: A deep-teal and warm-neutral palette with restrained Adinkra-inspired motifs keeps the tool professional and specific to its Ghanaian pediatric context rather than a generic medical template.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/rehabtrack/rehabtrack-2.png" alt="RehabTrack sessions module with filters" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Sessions — filterable SOAP log with draft and signed states</p>
+          </div>
+
+          <h2>Technical Architecture</h2>
+          <div class="arch">
+<pre>
+┌───────────────────────────────────────────────────────┐
+│                    <span class="hl">Supabase Cloud</span>                     │
+│  ┌────────────┐   ┌───────────┐   ┌────────────────┐  │
+│  │  Postgres  │   │   Auth    │   │    Edge Fn     │  │
+│  │ + Row-Level│   │  (Email / │   │   (nightly     │  │
+│  │  Security  │   │  Google)  │   │   cron backup) │  │
+│  └─────┬──────┘   └─────┬─────┘   └───────┬────────┘  │
+│        │                │            encrypted export │
+│        └────────┬───────┘                 │           │
+│                 │ sync + audit log         ▼           │
+└─────────────────┼─────────────────────────┼───────────┘
+                  │                          │
+      sync / queue│                 ┌────────┴─────────┐
+                  │                 │  <span class="hl">Google Drive</span>    │
+      ┌───────────┴──────┐          │  encrypted,      │
+      │  <span class="hl">RehabTrack PWA</span>  │          │  dated backups,  │
+      │  React + TS      │          │  retention window│
+      │                  │          └──────────────────┘
+      │  IndexedDB cache │
+      │  + write queue   │
+      │                  │
+      │  Android tablets │
+      │  (mobile clinic) │
+      │  + admin browser │
+      └──────────────────┘
+</pre>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center; margin-bottom: 24px;">One installable app on the edge; a permission-controlled Postgres backend as the source of truth; automatic encrypted backups the organization owns.</p>
+
+          <h2>The Modules</h2>
+          <ul>
+            <li><strong>Dashboard</strong>: A greeting, the day's alerts (notes pending signature, upcoming re-evaluations), precise KPI cards, upcoming appointments, recent sessions, and a caseload-by-discipline overview.</li>
+            <li><strong>Patients</strong>: A caseload list and a full child record — demographics, caregiver information, schedule, and treatment goals grouped by discipline — with a guided registration flow (Child Info, Caregiver Info, Referral Info) stepping through basics, birth history, clinical profile, and health & care.</li>
+            <li><strong>Evaluations</strong>: A filterable history with counts by status, an add-evaluation flow, and detail views that hold standardized instruments as data containers without fabricating their scoring.</li>
+            <li><strong>Care Plan</strong>: Multidisciplinary goals per child, each with a category, target date, progress fraction, and status (Active / Achieved / Discontinued), rolled up into per-discipline and overall completion — with editing scoped to each clinician's discipline.</li>
+            <li><strong>Sessions</strong>: A chronological, filterable log of SOAP notes with intervention tags, draft-versus-signed states, and e-signatures — every write routed through the offline queue.</li>
+            <li><strong>Reports</strong>: Sessions by month and discipline, goal-status distribution, average goal-progress trend, recent activity, and CSV export.</li>
+            <li><strong>Admin</strong>: User management, patient oversight, an audit log, per-therapist activity, and overdue-reassessment tracking with a notify action.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/rehabtrack/rehabtrack-4.png" alt="RehabTrack admin overview with team and audit log" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Admin — user management, audit log, and overdue-reassessment tracking</p>
+          </div>
+
+          <h2>Data Protection</h2>
+          <p>Because the system holds sensitive health data about children, protection was designed in rather than added on. CLCD Ghana is documented as the data controller. Access is authenticated and role-limited, scope of practice is enforced at the database level, and every change is recorded in an audit log. Nightly backups are encrypted before they leave the system and stored as dated copies the organization controls, with a documented restore path — so the program is never one lost tablet away from losing a child's history.</p>
+
+          <h2>Outcome</h2>
+          <ul>
+            <li><strong>Field-ready by design</strong> — the full record works offline on the tablets clinicians carry, then reconciles on reconnect with explicit conflict handling instead of silent overwrites.</li>
+            <li><strong>Coordinated multidisciplinary care</strong> — every discipline works from one shared care plan and goal set, with permissions that keep each clinician in their lane.</li>
+            <li><strong>Defensible clinical records</strong> — SOAP notes, e-signatures, pending-signature alerts, and a complete audit trail replace loose paper files.</li>
+            <li><strong>Owned and handoff-ready</strong> — packaged with run, deploy, data-protection, and handover documentation, plus an ownership-agnostic backup target, so CLCD can operate and transfer it independently.</li>
+          </ul>
+
+          <h2>What This Project Demonstrates</h2>
+          <ul>
+            <li><strong>Domain-driven product design</strong>: Translating a real clinical workflow — multidisciplinary pediatric rehabilitation — into module structure, permissions, and screens that match how the work actually happens.</li>
+            <li><strong>Systems design for constrained environments</strong>: Architecting offline-first sync, database-level permissions, and encrypted backup as one coherent system rather than bolted-on features.</li>
+            <li><strong>Information design for decision-making</strong>: Choosing metrics and labels — progress versus achievement, sync state, pending signatures — so the interface tells the truth and supports clinical judgment.</li>
+            <li><strong>Design integrity</strong>: Refusing to invent clinical scoring, and building the system to defer that authority to qualified therapists.</li>
+            <li><strong>AI-assisted development as a design tool</strong>: Directing the build in reviewable stages while owning every product, data-model, and experience decision.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur. Designed with intention.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  
+  <script>
+    // Lightbox Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("lightbox-close");
+      const prevBtn = document.getElementById("lightbox-prev");
+      const nextBtn = document.getElementById("lightbox-next");
+      
+      const galleryItems = Array.from(document.querySelectorAll(".gallery-item.clickable img"));
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = galleryItems[currentIndex].src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      galleryItems.forEach((img, index) => {
+        img.parentElement.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+
+      // Close on background click
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+      });
+    });
+  </script>
+</body>
+</html>
