@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLCD-HRMS — HR & Payroll for CLCD Ghana — Michael Arthur</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .arch {
+      background: #0c211f;
+      color: #cfe6e0;
+      border-radius: 12px;
+      padding: 26px;
+      overflow-x: auto;
+      margin: 24px 0;
+      box-shadow: 0 20px 40px -28px rgba(11,93,84,.6);
+    }
+    .arch pre {
+      margin: 0;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12.5px;
+      line-height: 1.5;
+      white-space: pre;
+      color: #bfe3db;
+    }
+    .arch .hl {
+      color: #63d6c2;
+    }
+    .arch .amber {
+      color: #f0a06a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#data-storytelling">Data Storytelling</a></li>
+        <li><a href="../index.html#graphic-design">Graphic Design</a></li>
+        <li><a href="../index.html#information-design">Information Design</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#product-design" class="back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to portfolio
+      </a>
+      <div class="project-hero-content">
+        <p class="project-category">Product Design</p>
+        <h1>CLCD-HRMS — HR & Payroll for CLCD Ghana</h1>
+        <p class="project-subtitle">Installable PWA + Ghana-Compliant Payroll Engine + Employee Self-Service</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT HERO IMAGE -->
+  <section class="project-hero-image" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="project-image-full gallery-item clickable">
+        <img src="../images/product-design/hrms/hrms1.png" alt="CLCD-HRMS sign-in screen" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center; letter-spacing: 0.02em;">Sign-in — "HR & payroll in one calm, secure place" for CLCD Ghana</p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+      <img src="" alt="Expanded View" class="lightbox-img" id="lightbox-img">
+      <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- PROJECT CONTENT -->
+  <section class="project-content">
+    <div class="container">
+      <div class="project-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="project-meta">
+          <div class="meta-block">
+            <h4>Role</h4>
+            <p>Product Designer, Systems Architect, Development Director</p>
+          </div>
+          <div class="meta-block">
+            <h4>Client</h4>
+            <p>CLCD Ghana — community development organisation</p>
+          </div>
+          <div class="meta-block">
+            <h4>Timeline</h4>
+            <p>2026 – Present (ongoing iteration)</p>
+          </div>
+          <div class="meta-block">
+            <h4>Tools & Technologies</h4>
+            <p>AI-Assisted Development<br>
+            React + TypeScript + Vite (Installable PWA)<br>
+            Tailwind CSS<br>
+            Supabase: Postgres, Auth, Row-Level Security, Storage<br>
+            Recharts (dashboards & reports)<br>
+            Dated statutory-rates config (Ghana PAYE / SSNIT / NHIL)<br>
+            Product Design & UX Architecture</p>
+          </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="project-body">
+          <h2>Overview</h2>
+          <p>CLCD-HRMS is an installable HR and payroll system I designed and directed for <strong>CLCD Ghana</strong>, a community development organisation. It covers the full employment lifecycle — employee records, leave, attendance, onboarding, performance, documents, and an employee self-service portal — and, at its core, runs <strong>Ghana-compliant statutory payroll</strong>: GRA PAYE, SSNIT Tier 1 and Tier 2, and NHIL.</p>
+          <p>Two constraints shaped every decision. The payroll math has to be <strong>exactly right</strong>, because an error there is a legal and financial event, not a cosmetic bug. And the person running it may not be technical, so the whole system had to be calm and forgiving — clear labels, confirmation before anything irreversible, plain-language errors, and a written operator manual. The product's own promise says it plainly: HR and payroll "in one calm, secure place."</p>
+
+          <h2>The Problem</h2>
+          <p>Ghanaian statutory payroll is unforgiving. PAYE runs on progressive bands applied after a personal relief; SSNIT splits across an employer contribution, an employee contribution, and a Tier 2 payment to an approved trustee; NHIL and other deductions stack on top. The rates change from tax year to tax year, and a payslip calculated under this year's rules must stay correct forever, even after the rules move.</p>
+          <p>Off-the-shelf tools either don't model Ghanaian statutory rules or are priced and shaped for large corporate HR departments — not a lean organisation whose payroll might be run by an administrator or a finance officer rather than a payroll specialist. Before CLCD-HRMS, that work lived in spreadsheets: no enforced permissions, no audit trail, no guarantee that last year's payslips still reconciled, and no safe way to give staff visibility into their own records.</p>
+
+          <h2>The Solution</h2>
+          <p>I designed CLCD-HRMS as one installable app over a permission-controlled relational backend, organised around three ideas:</p>
+          <ul>
+            <li><strong>A verified payroll engine at the core</strong>: A pure calculation module — gross, allowances, overtime, and loans in; itemised PAYE, SSNIT employee and employer, Tier 2, NHIL, and net pay out — built and tested in isolation against sample employees before it was wired to any screen.</li>
+            <li><strong>One dated source of truth for the law</strong>: Every statutory rate, band, and relief lives in a single dated config file. Nothing tax-related is hard-coded anywhere else, and each pay run stamps the rates version it used, so historical payslips stay correct after any future change.</li>
+            <li><strong>A calm, role-scoped interface</strong>: A Supabase-backed PWA where Row-Level Security means most staff see only their own record and payslips, HR and admin roles are explicit and least-privilege, and the riskiest actions are gated behind confirmation and clear system states.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/hrms/hrms2.png" alt="CLCD-HRMS Dashboard" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Dashboard — active headcount, leave balances, and payroll cost trends in one clear view</p>
+          </div>
+
+          <h2>Design Process</h2>
+          <p>I started from the operator, not the org chart — asking what someone non-technical needs to do a payroll run without fear, and what must never be possible to do by accident. From there I set the requirements that governed the build:</p>
+          <ul>
+            <li>The payroll engine is proven correct before it touches the UI, and reads its rates from one dated file — never from logic buried in code</li>
+            <li>Row-Level Security is default-deny on every table; staff read only their own data</li>
+            <li>A finalised pay run is immutable and every salary change and pay-run action is audit-logged</li>
+            <li>Irreversible actions require confirmation, and errors explain what happened and how to fix it</li>
+            <li>Account ownership is never hard-coded — handover is a config swap, not a rebuild</li>
+          </ul>
+          <p>The system was built phase by phase — foundation, employee records and self-service, leave, the payroll engine, pay runs and payslips, then onboarding, performance, documents, dashboards, and hardening — with each phase reviewed and tested before the next. The payroll engine had its own sign-off gate: it wasn't allowed to advance until it reproduced the expected PAYE, SSNIT, and net figures for sample employees across the salary range, to the cedi.</p>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/hrms/hrms4.png" alt="Employee Self-Service Profile" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Employee profile — secure, role-scoped self-service dashboard for staff</p>
+          </div>
+
+          <h2>Key Design Decisions</h2>
+          <ul>
+            <li><strong>Trust through verification, not assertion</strong>: The payroll engine is a pure module tested against known-good sample calculations before integration. Correctness is demonstrated, not assumed — which is the only honest posture when the output is someone's actual pay.</li>
+            <li><strong>The law as versioned data</strong>: Statutory rates live in one dated, editable config, and pay runs record which version they used. An annual rate update is a one-file edit that can't retroactively corrupt past payslips — a data-integrity decision expressed as an interface promise.</li>
+            <li><strong>Immutable, audited pay runs</strong>: Once a monthly run is finalised it locks and stamps its rates version, and every salary change and run action is written to an immutable audit log — who, what, when. Payroll history becomes a record, not a mutable draft.</li>
+            <li><strong>Forgiving by default</strong>: For a non-technical operator, confirmation steps, sensible defaults, inline help, and plain-language errors aren't polish — they're the safety system. A prominent "test environment — do not run real payroll here" banner keeps staging visibly separate from the real thing.</li>
+            <li><strong>Honest system states</strong>: The header shows Online, Offline, or Syncing, and payroll runs — which touch shared, sensitive data — are gated behind an explicit, friendly connectivity check rather than being allowed to fail silently.</li>
+            <li><strong>Least privilege as the default view</strong>: Self-service is scoped so an employee sees only their own profile, payslips, and leave balance. The interface's shape mirrors the permission model beneath it.</li>
+          </ul>
+
+          <h2>Technical Architecture</h2>
+          <div class="arch">
+<pre>
+┌──────────────────────────────────────────────────────────┐
+│                       <span class="hl">Supabase Cloud</span>                       │
+│  ┌───────────┐   ┌────────────┐   ┌───────────────────┐  │
+│  │   Auth    │   │  Postgres  │   │      Storage      │  │
+│  │ Emp / HR /│   │ + Row-Level│   │  (contracts, IDs) │  │
+│  │  Admin    │   │  Security  │   │      + RLS        │  │
+│  │           │   │ default-   │   │                   │  │
+│  └─────┬─────┘   │  deny      │   └────────┬──────────┘  │
+│        │         └─────┬──────┘   encrypted│ export       │
+└────────┼───────────────┼───────────────────┼─────────────┘
+         │               │                   ▼
+   ┌─────┴───────────────┴─────┐      ┌──────────────────┐
+   │      <span class="hl">CLCD-HRMS PWA</span>        │      │  Off-site backup │
+   │  React + TS · installable │      │  (tested restore)│
+   │  Online / Offline / Sync  │      └──────────────────┘
+   └─────────────┬─────────────┘
+                 │ pay run  ── stamps rates-version, then locks
+                 ▼
+   ┌───────────────────────────────┐      reads
+   │   <span class="hl">Payroll Engine (pure)</span>       │ ───────────────┐
+   │   PAYE · SSNIT T1 + T2 ·       │                ▼
+   │   NHIL → net pay, itemised     │   ┌────────────────────────┐
+   │   immutable once finalised     │   │ <span class="amber">ghana-rates.2026.ts</span>    │
+   └───────────────────────────────┘   │ single source · dated  │
+                                        │ · operator-editable    │
+                                        └────────────────────────┘
+</pre>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center; margin-bottom: 24px;">A verified pure engine reading one dated rates file; a role-scoped PWA over Postgres with default-deny security; encrypted, restore-tested backups the organisation owns.</p>
+
+          <h2>The Modules</h2>
+          <ul>
+            <li><strong>Dashboard</strong>: A calm overview — active headcount, pending leave, leave liability, and the last payroll total — with a payroll-cost trend, headcount by department, and leave liability by type.</li>
+            <li><strong>Employees & Self-Service</strong>: A central employee record (role, salary structure, SSNIT / Ghana Card / TIN, bank details, documents), plus a self-service view where staff see only their own profile, payslips, and leave, and can request leave or update permitted fields.</li>
+            <li><strong>Leave & Attendance</strong>: Leave types and balances with a request-and-approval chain, an HR overview, accrual rules held in config, and attendance tracking.</li>
+            <li><strong>Payroll & Payslips</strong>: Monthly pay runs that lock on finalisation and stamp their rates version, producing branded payslips that itemise each statutory deduction, plus statutory-return totals for GRA and SSNIT filing.</li>
+            <li><strong>Onboarding, Performance & Documents</strong>: Onboarding and offboarding checklists, a performance and tasks cycle with recognition, and a secure document store on Supabase Storage with RLS.</li>
+            <li><strong>Reports</strong>: Performance scores, payroll-cost trend, and headcount charts, with CSV exports for headcount, leave liability, payroll summary, and performance — while any employee-facing view stays scoped to that person alone.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/hrms/hrms3.png" alt="CLCD-HRMS Reports" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Reports — performance metrics, payroll trends, and historical export logs</p>
+          </div>
+
+          <h2>Data Protection</h2>
+          <p>The system holds salaries, national identifiers, and bank details, so it's built to a Ghana Data Protection Act posture: collect the minimum, control access tightly, and document retention. Row-Level Security is default-deny on every table, roles are least-privilege, and everything sensitive is audit-logged. Backups are encrypted off-site with a documented and tested restore, and encryption is enforced in transit and at rest. Ownership is deliberately account-agnostic — keys, hosting, and backup targets all live in configuration — so CLCD can take custody of the system by swapping config values, with nothing to rebuild.</p>
+
+          <h2>Outcome</h2>
+          <ul>
+            <li><strong>Payroll proven to the cedi</strong> — the engine reproduces expected PAYE, SSNIT, and net figures across the salary range before it is trusted with a real run.</li>
+            <li><strong>History that stays correct</strong> — dated rates versioning and immutable, audit-logged pay runs mean past payslips remain accurate after the law changes.</li>
+            <li><strong>Usable by a non-specialist</strong> — a calm, forgiving interface with confirmations, plain-language errors, visible test-versus-live separation, and a written operator manual.</li>
+            <li><strong>Owned and handoff-ready</strong> — account-agnostic configuration and encrypted, restore-tested backups let CLCD run and take over the system independently.</li>
+          </ul>
+
+          <h2>What This Project Demonstrates</h2>
+          <ul>
+            <li><strong>Designing for correctness</strong>: Treating a high-stakes calculation as a first-class design problem — isolating it, testing it against known cases, and refusing to ship it on faith.</li>
+            <li><strong>Information architecture with consequences</strong>: Modelling statutory law as versioned data so the system stays honest across time, not just at a moment.</li>
+            <li><strong>UX for non-technical, high-stakes operators</strong>: Making a payroll run feel safe through confirmations, clear states, and forgiving copy rather than assuming expertise.</li>
+            <li><strong>Security and privacy by design</strong>: Default-deny permissions, least-privilege roles, audit logging, and a documented data-protection posture built in from the first phase.</li>
+            <li><strong>AI-assisted development as a design tool</strong>: Directing a phased build with explicit sign-off gates while owning every product, data-model, and experience decision.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur. Designed with intention.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  
+  <script>
+    // Lightbox Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("lightbox-close");
+      const prevBtn = document.getElementById("lightbox-prev");
+      const nextBtn = document.getElementById("lightbox-next");
+      
+      const galleryItems = Array.from(document.querySelectorAll(".gallery-item.clickable img"));
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = galleryItems[currentIndex].src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      galleryItems.forEach((img, index) => {
+        img.parentElement.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+
+      // Close on background click
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+      });
+    });
+  </script>
+</body>
+</html>
