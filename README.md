@@ -82,7 +82,7 @@ All image placeholders in the HTML are marked with comments showing exactly wher
 2. **Graphic Design** — Flyers/Posters, Reports & Books
 3. **Information Design** — Infographics, UI/UX, Process Flows
 4. **Health Communication** — NMEP Materials, CLCD Communications
-5. **Product Design** — MiNet Pharmacy System
+5. **Product Design** — MiNet Pharmacy System, RehabTrack Pediatric EMR, CLCD-HRMS, FarmPulse
 
 ## Customization
 

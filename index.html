@@ -457,6 +457,69 @@
           </div>
         </div>
 
+        <!-- CARD: FarmPulse -->
+        <div class="card reveal slide-right">
+          <div class="card-header">
+            <div class="card-thumb">
+              <img src="images/product-design/farmpulse/farmpulse-0.png" alt="FarmPulse Offline-First Farm Management">
+            </div>
+            <div class="card-info">
+              <h3>FarmPulse</h3>
+              <p>Offline-First Farm Management PWA</p>
+            </div>
+            <div class="card-toggle">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-body-inner">
+              <p class="card-brief">
+                A complete farm management system for MiNet Farm in Ghana's Bono East Region, built for plots where the
+                signal drops. Fields, crops, inventory, equipment, labour, finances, harvest and weather all live on the
+                device first and queue for sending — so a record made at the scale or in the field is never waiting on a
+                network that may not arrive for days.
+              </p>
+
+              <div class="card-dropdown">
+                <div class="card-dropdown-toggle">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                  Design Principle — Interface Honesty
+                </div>
+                <div class="card-dropdown-content">
+                  <div class="card-dropdown-content-inner">
+                    The sync screen reports what is actually true: how many changes are waiting, when anything was last
+                    really sent, and which records can lose a concurrent edit. It replaced a simulated progress bar that
+                    always finished green — which would have told a farmer with a week of unsent work that everything
+                    was safe. Every change is an entry in an append-only log with its own ULID, so nothing is lost and a
+                    retry is never a duplicate.
+                  </div>
+                </div>
+              </div>
+
+              <a href="projects/farmpulse.html" class="card-image">
+                <img src="images/product-design/farmpulse/farmpulse-0.png" alt="FarmPulse dashboard running offline">
+                <div class="card-image-overlay">
+                  <span>View full project <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </div>
+              </a>
+
+              <div class="card-tags">
+                <span class="tag">React 19</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Dexie / IndexedDB</span>
+                <span class="tag">Offline-First</span>
+                <span class="tag">PWA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmPulse — Offline-First Farm Management — Michael Arthur</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .arch {
+      background: #0c211f;
+      color: #cfe6e0;
+      border-radius: 12px;
+      padding: 26px;
+      overflow-x: auto;
+      margin: 24px 0;
+      box-shadow: 0 20px 40px -28px rgba(11,93,84,.6);
+    }
+    .arch pre {
+      margin: 0;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12.5px;
+      line-height: 1.5;
+      white-space: pre;
+      color: #bfe3db;
+    }
+    .arch .hl {
+      color: #63d6c2;
+    }
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    .policy-table th {
+      text-align: left;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0 14px 10px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .policy-table td {
+      padding: 14px 14px 14px 0;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .policy-table td:first-child {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 34%;
+    }
+    @media (max-width: 640px) {
+      .policy-table,
+      .policy-table tbody,
+      .policy-table tr,
+      .policy-table td {
+        display: block;
+        width: auto;
+      }
+      .policy-table thead {
+        display: none;
+      }
+      .policy-table tr {
+        padding: 4px 0 16px;
+        border-bottom: 1px solid var(--border-light);
+      }
+      .policy-table td {
+        border-bottom: 0;
+        padding: 4px 0;
+      }
+      .policy-table td:first-child {
+        white-space: normal;
+        padding-top: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#data-storytelling">Data Storytelling</a></li>
+        <li><a href="../index.html#graphic-design">Graphic Design</a></li>
+        <li><a href="../index.html#information-design">Information Design</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#product-design" class="back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to portfolio
+      </a>
+      <div class="project-hero-content">
+        <p class="project-category">Product Design</p>
+        <h1>FarmPulse — Offline-First Farm Management</h1>
+        <p class="project-subtitle">Installable PWA + Append-Only Sync Engine + Automatic Field Weather</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT HERO IMAGE -->
+  <section class="project-hero-image" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="project-image-full gallery-item clickable">
+        <img src="../images/product-design/farmpulse/farmpulse-0.png" alt="FarmPulse dashboard running with no connection" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center; letter-spacing: 0.02em;">The dashboard with the connection cut — every figure on this screen is read from the device</p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+      <img src="" alt="Expanded View" class="lightbox-img" id="lightbox-img">
+      <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- PROJECT CONTENT -->
+  <section class="project-content">
+    <div class="container">
+      <div class="project-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="project-meta">
+          <div class="meta-block">
+            <h4>Role</h4>
+            <p>Product Designer, Systems Architect, Development Director</p>
+          </div>
+          <div class="meta-block">
+            <h4>Client</h4>
+            <p>MiNet Farm — Techiman, Bono East, Ghana</p>
+          </div>
+          <div class="meta-block">
+            <h4>Timeline</h4>
+            <p>2026 – Present (ongoing iteration)</p>
+          </div>
+          <div class="meta-block">
+            <h4>Tools &amp; Technologies</h4>
+            <p>AI-Assisted Development<br>
+            React 19 + TypeScript + Vite (Installable PWA)<br>
+            Tailwind CSS<br>
+            Dexie / IndexedDB (device-first storage)<br>
+            <code>@minet/offline-sync</code> (append-only oplog, ULID identity)<br>
+            Open-Meteo (keyless weather &amp; geocoding)<br>
+            Recharts (reporting)<br>
+            Vitest (116 tests)<br>
+            Product Design &amp; UX Architecture</p>
+          </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="project-body">
+          <h2>Overview</h2>
+          <p>FarmPulse is an offline-first farm management system I designed and directed for <strong>MiNet Farm</strong>, a mixed crop operation working plots across Techiman and Prang in Ghana's Bono East Region. It covers the whole operation in one installable app — fields, crops, activities, harvests, inventory, suppliers, purchase orders, equipment, workers, labour, finances, tasks, weather and notes — and it does all of it with the connection off.</p>
+          <p>The premise is a single sentence: <em>the device is the source of truth until the server says otherwise</em>. Every record is written to the phone or tablet first and queued for sending; nothing waits on a network that may not arrive for days. The design work was less about drawing screens than about deciding what the software is allowed to claim — and making sure the interface never tells a farmer their work is safe when it isn't.</p>
+
+          <h2>The Problem</h2>
+          <p>Farm software assumes a connection. Almost all of it is a cloud form with a spinner: you tap Save, it posts to a server, and if the server isn't reachable the record simply doesn't exist. On a farm in Bono East that is a daily condition, not an edge case. Coverage drops between plots, data runs out mid-month, and the moment a record matters most — standing in the field, counting bags at the scale, paying a crew at dusk — is exactly when there is no signal.</p>
+          <p>The practical result is that the recording gets deferred. Work is noted on paper, in a phone's notes app, or in someone's head, and entered later if at all. By the time it reaches a spreadsheet the numbers have drifted: labour days are rounded, input quantities are guessed, and nobody can answer the question that actually matters at the end of a season — <em>did this field make money?</em></p>
+          <p>There was a second, subtler problem, and it shaped the project more than the first. The initial version of this app had a sync screen that <em>simulated</em> syncing — a timer, a progress bar, a random failure rate. It always finished green. A farmer with a week of unsent work would have seen a tick mark and believed it. An interface that lies about whether data is safe is worse than one that has no sync at all, because it removes the instinct to keep a paper backup.</p>
+
+          <h2>The Solution</h2>
+          <p>FarmPulse is one installable progressive web app with a local database as its primary store and a durable outbound queue behind it, structured in three layers:</p>
+          <ul>
+            <li><strong>FarmPulse PWA (React 19 + TypeScript)</strong>: Twelve modules — Dashboard, Crops &amp; Fields, Inventory, Equipment, Workers &amp; Labour, Tasks &amp; Activities, Purchases &amp; Suppliers, Finances, Harvest, Weather, Reports and Settings — installable to a phone or tablet home screen, with a service worker that precaches the entire application shell.</li>
+            <li><strong>Device-first data layer (Dexie / IndexedDB)</strong>: Reads and writes go to the device. There is no loading state that depends on a network, because no screen in the app is waiting on one.</li>
+            <li><strong>Append-only sync engine (<code>@minet/offline-sync</code>)</strong>: Every change is recorded as an operation in an ordered, append-only log carrying its own identity. An operation leaves the queue only when a server confirms it, or when it is parked as permanently failed <em>and shown to the user with the reason</em>.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/farmpulse/farmpulse-1.png" alt="FarmPulse crop management across four fields" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Crops &amp; Fields — every crop tied to a named plot, a season, and a planting-to-harvest window</p>
+          </div>
+
+          <h2>Design Process</h2>
+          <p>I started from the season rather than from a feature list. A crop moves through land preparation, planting, fertilising, weeding, spraying, harvest, drying, bagging and sale; money and labour attach at every one of those steps, and inputs are drawn down from a store that has to be reordered before it runs out. I mapped that cycle and asked the same three questions at each step: what gets recorded here, who records it, and what happens if there is no signal when they do?</p>
+          <p>From that mapping I set the core requirements:</p>
+          <ul>
+            <li>Every screen must read and write with no connection — not degrade, not queue-and-warn, but work</li>
+            <li>The app must never overstate the safety of a record; unsent must look unsent</li>
+            <li>A record of something that <em>happened</em> must never be silently overwritten by another device</li>
+            <li>Money must read in the currency the farm actually trades in, not a default dollar</li>
+            <li>Weather must be a real input to decisions, and a forecast must never be filed as a fact</li>
+            <li>Plots in different districts must get their own weather, because they get their own rain</li>
+          </ul>
+          <p>I designed the module structure, screens and interaction flows, then directed the build with AI-assisted development tools — defining what to build and how each interaction should behave, and working in reviewable stages so each module was verified before the next was built on top of it. The sync layer carries 116 automated tests, including one that fails if a new table is added to the database without declaring a conflict policy for it.</p>
+
+          <h2>Key Design Decisions</h2>
+          <ul>
+            <li><strong>The sync screen tells the truth, even when the truth is unflattering</strong>: Where a simulated progress bar used to sit, the screen now reports the real state — how many changes are waiting, when anything was last actually sent, and how many need attention. With no server configured it says exactly that, in plain words, and explains that the queue is intact. "Last sent: Never" is a design decision, not an oversight.</li>
+            <li><strong>Conflict policy chosen per table, and published</strong>: Records of what <em>happened</em> are append-only and cannot conflict. Records of what is <em>currently true</em> are last-writer-wins and can, so a concurrent edit will lose. Rather than bury that, the settings screen names the second group under "What happens if two people edit the same thing?" — people are entitled to know which of their records behave that way.</li>
+            <li><strong>Identity that survives two disconnected phones</strong>: Every synced row carries a client-generated ULID. Two devices working offline will both produce a local record number 5; they will never produce the same ULID. The device-local id stays as the internal key, so nothing in the app had to change, but nothing syncs on it.</li>
+            <li><strong>A forecast is never written into the log</strong>: The weather log is a record of what actually happened — it feeds the seven-day averages and the trend chart. A prediction filed into it would quietly corrupt the history, so only finished days are stored as observations. Everything from today forward is labelled <em>Forecast — not saved to the log</em> and displayed only.</li>
+            <li><strong>Weather per plot, not per farm</strong>: A farm at Techiman with a plot at Prang spans two districts and genuinely different rainfall, so readings are fetched per distinct location. The coordinate field had always been a free-text box, so the upgrade parses what people already typed — and anything it cannot read with confidence is left alone and flagged for correction rather than guessed at.</li>
+            <li><strong>Currency as a farm property</strong>: Amounts are stored against an ISO currency code held on the farm record, defaulting to the Ghana Cedi. No screen hardcodes a symbol, and the sign sits outside it — <code>-₵1,200.00</code>, not <code>₵-1,200.00</code>.</li>
+            <li><strong>The PIN never leaves the device</strong>: Unlocking the app is a local act, not an account login, so the PIN hash is redacted from everything the sync layer sends. A server has no use for it.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/farmpulse/farmpulse-2.png" alt="FarmPulse data synchronization panel showing 108 changes waiting and never sent" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">The sync panel — the queue, in order, with an honest count and an honest "Last sent: Never"</p>
+          </div>
+
+          <h2>Conflict Policy</h2>
+          <p>The rule of thumb is that anything recording <em>what happened</em> cannot conflict, and anything recording <em>what is currently true</em> can. Every table in the database is assigned to one of the two, deliberately, in a single list a person can find and argue with:</p>
+
+          <table class="policy-table">
+            <thead>
+              <tr>
+                <th>Policy</th>
+                <th>Applies to</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Append-only<br><span style="font-weight:400; color:var(--text-muted); font-size:0.82rem;">cannot conflict; nothing is ever lost</span></td>
+                <td>Crop activities, harvests, stock movements, equipment logs, labour, expenses, revenue, weather readings, notes</td>
+              </tr>
+              <tr>
+                <td>Last-writer-wins<br><span style="font-weight:400; color:var(--text-muted); font-size:0.82rem;">a concurrent edit will be discarded</span></td>
+                <td>Farms, fields, crops, inventory, suppliers, purchase orders, equipment, workers, budgets, tasks, users</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>A harvest weighed on two phones on the same afternoon produces two harvest records, which is correct — both weighings happened. A crop's status edited on two phones produces one winner, which is a genuine loss of information, and so it is named on the settings screen rather than hidden in a changelog.</p>
+
+          <h2>Technical Architecture</h2>
+          <div class="arch">
+<pre>
+        ┌────────────────────────────────────────────┐
+        │              <span class="hl">FarmPulse PWA</span>                 │
+        │           React 19 + TypeScript            │
+        │                                            │
+        │   12 modules: fields, crops, inventory,    │
+        │   equipment, labour, finances, harvest     │
+        │                                            │
+        │            reads and writes, always        │
+        │                     │                      │
+        │                     ▼                      │
+        │  ┌──────────────────────────────────────┐  │
+        │  │ <span class="hl">Dexie / IndexedDB</span>                    │  │
+        │  │ the device is the source of truth    │  │
+        │  └──────────────────┬───────────────────┘  │
+        │                     │ every change         │
+        │                     ▼                      │
+        │  ┌──────────────────────────────────────┐  │
+        │  │ <span class="hl">syncOps</span>: append-only oplog           │  │
+        │  │ ULID identity, ordered, idempotent   │  │
+        │  │ leaves only on confirm, or on a      │  │
+        │  │ parked failure shown with its reason │  │
+        │  └──────────────────┬───────────────────┘  │
+        └─────────────────────┼──────────────────────┘
+                              │ when a connection exists
+              ┌───────────────┴───────────────┐
+              ▼                               ▼
+   ┌─────────────────────┐        ┌──────────────────────┐
+   │ <span class="hl">Sync endpoint</span>       │        │ <span class="hl">Open-Meteo</span>           │
+   │ replays ops, and a  │        │ keyless, CC BY 4.0   │
+   │ repeat is a no-op   │        │ observed  -> log     │
+   └─────────────────────┘        │ forecast  -> display │
+                                  └──────────────────────┘
+</pre>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center; margin-bottom: 24px;">The device is not a cache of the server. The server is a destination for a log the device already owns.</p>
+
+          <h2>The Modules</h2>
+          <ul>
+            <li><strong>Dashboard</strong>: Active crops, inventory alerts, pending tasks and the month's spend against the last, with a crop-status breakdown, a six-month revenue-and-expense snapshot, upcoming tasks, low-stock alerts and a live activity feed.</li>
+            <li><strong>Crops &amp; Fields</strong>: Plots with area, soil type and their own coordinates; crops tracked from planning through planted, growing and harvested, each tied to a field, a variety and a season, with an activity history per crop.</li>
+            <li><strong>Inventory</strong>: Seed, fertiliser, agrochemicals, fuel and general stores with minimum-stock thresholds, expiry dates, a movement history for every item, and low-stock alerts that surface on the dashboard with a direct reorder action.</li>
+            <li><strong>Equipment</strong>: Tractors, implements and vehicles with condition, cost per hour, and usage, maintenance and repair logs — plus the next service date, so a due sprayer becomes a task rather than a surprise.</li>
+            <li><strong>Workers &amp; Labour</strong>: A workforce record with daily rates and status, and a labour log of hours worked per field and task type — which is what turns "we weeded for two weeks" into a cost attached to a plot.</li>
+            <li><strong>Tasks &amp; Activities</strong>: A board of field work across To Do, In Progress and Completed, assigned to named people with priorities, due dates and a category, filterable to today or this week.</li>
+            <li><strong>Purchases &amp; Suppliers</strong>: A supplier book with contacts and ratings, and purchase orders moving from draft through ordered to received and paid, with received quantities landing in inventory.</li>
+            <li><strong>Finances</strong>: Revenue and expenses with a cash-flow view, an expense breakdown by category, and seasonal budgets tracked planned-against-actual.</li>
+            <li><strong>Harvest</strong>: Quantity, grade, moisture content, batch number, storage location and treatment — the detail a buyer asks about, recorded at the scale rather than reconstructed later.</li>
+            <li><strong>Weather</strong>: Current conditions and a clearly separated forecast, seven-day averages for high, low, rainfall and humidity, and a log of observed days per plot.</li>
+            <li><strong>Reports</strong>: Financial summary, crop yields, labour and wages, and equipment, with CSV export for anything that has to leave the app.</li>
+            <li><strong>Settings</strong>: Farm profile, currency, measurement system, alert preferences, a full JSON export of the device's data — and the sync panel.</li>
+          </ul>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/farmpulse/farmpulse-3.png" alt="FarmPulse weather screen separating forecast from the observation log" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Weather — live conditions for the farm's own coordinates, with the forecast fenced off from the log</p>
+          </div>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/farmpulse/farmpulse-4.png" alt="FarmPulse financial management with six-month cash flow in Ghana Cedi" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Finances — a season's cash flow in the currency the farm actually trades in</p>
+          </div>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/farmpulse/farmpulse-5.png" alt="FarmPulse task board assigned to named farm staff" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Tasks — field work assigned to named people, with the week's priorities visible at a glance</p>
+          </div>
+
+          <h2>Designed for the Phone in the Field</h2>
+          <p>The people who generate the records are not at a desk. The layout collapses to a single column with a five-item bottom bar and a persistent add button, so logging a labour day or a harvest is a few taps at the point the work happens rather than an evening's data entry. Because the app is installed to the home screen and its shell is precached, it opens from a cold start with no connection — I verified this against the production build with the network disabled: the app reloads and every module renders from the device.</p>
+
+          <div class="gallery-item clickable" style="margin: 36px 0;">
+            <img src="../images/product-design/farmpulse/farmpulse-6.png" alt="FarmPulse installed on a phone, dashboard and task board" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; text-align: center;">Installed on a phone — the same records, the same offline behaviour, one thumb</p>
+          </div>
+
+          <h2>Data Ownership</h2>
+          <p>The farm's data lives on the farm's devices. There is a one-tap JSON export of everything the device holds, so a backup is never contingent on a server being reachable or a subscription being current. The sync endpoint is configuration, not a dependency: point it at a server and the queue drains in the order it was made; leave it unset and the app keeps working and says plainly that nothing has been sent. Migrations follow the same principle — when an old sync log could not be converted into real operations because it carried no payload, it was cleared rather than reconstructed, because converting it would have meant inventing data.</p>
+
+          <h2>Outcome</h2>
+          <ul>
+            <li><strong>Genuinely offline</strong> — verified against the production build with the network disabled: a cold reload and every module renders from the device.</li>
+            <li><strong>Nothing lost</strong> — an ordered, append-only queue with stable identities and idempotent replay; a change leaves only on confirmation, or as a named failure the user can see.</li>
+            <li><strong>Honest by design</strong> — the sync screen reports the real state, and the one policy that can discard a concurrent edit is published rather than hidden.</li>
+            <li><strong>The whole operation in one place</strong> — twelve modules covering land, crops, inputs, machinery, people, money and weather, so a season can actually be costed per field.</li>
+            <li><strong>Owned and portable</strong> — full local export, a keyless weather provider with visible attribution, and no hosted dependency required for the app to work.</li>
+          </ul>
+
+          <h2>What This Project Demonstrates</h2>
+          <ul>
+            <li><strong>Designing for the constraint, not around it</strong>: Treating intermittent connectivity as the normal operating condition changes the data model, not just the error states.</li>
+            <li><strong>Interface honesty as a design discipline</strong>: Replacing a reassuring simulation with an accurate report — and choosing to surface the one case where data can genuinely be lost.</li>
+            <li><strong>Information design for decisions</strong>: Separating forecast from observation, plot from farm, and what happened from what is currently true, so the numbers a farmer acts on mean what they appear to mean.</li>
+            <li><strong>Systems thinking across products</strong>: The sync engine is a shared package, designed once and carried across projects rather than reinvented per app.</li>
+            <li><strong>AI-assisted development as a design tool</strong>: Directing the build in reviewable stages while owning every product, data-model and experience decision.</li>
+          </ul>
+
+          <!-- LINK TO LIVE PROJECT -->
+          <div class="project-cta">
+            <a href="https://farm-pulse-2-0.vercel.app/dashboard" class="btn btn-primary" target="_blank" rel="noopener">
+              View live project
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    // Lightbox Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("lightbox-close");
+      const prevBtn = document.getElementById("lightbox-prev");
+      const nextBtn = document.getElementById("lightbox-next");
+
+      const galleryItems = Array.from(document.querySelectorAll(".gallery-item.clickable img"));
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = galleryItems[currentIndex].src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      galleryItems.forEach((img, index) => {
+        img.parentElement.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+
+      // Close on background click
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+      });
+    });
+  </script>
+</body>
+</html>
