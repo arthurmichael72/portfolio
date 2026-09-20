@@ -1,2 +1,14 @@
+# macOS
 .DS_Store
-**/.DS_Store
+._*
+
+# Interrupted downloads
+*.crdownload
+*.part
+
+# Editors
+.vscode/
+.idea/
+
+# Node
+node_modules/
