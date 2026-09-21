@@ -347,3 +347,10 @@
   .lightbox-close { top: -40px; right: 0; }
   .lightbox-content { width: 100%; padding: 0 10px; }
 }
+
+/* Preformatted diagrams scroll inside their own box rather than widening the
+   page. `.arch` already does this; this covers the plain <pre> blocks. */
+.project-body pre {
+  max-width: 100%;
+  overflow-x: auto;
+}

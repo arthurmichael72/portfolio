@@ -792,3 +792,36 @@ body::before {
   .hero-actions { flex-direction: column; }
   .btn { justify-content: center; }
 }
+
+/* ===== Grid children must be allowed to shrink =====
+   A grid item defaults to min-width:auto, so it refuses to go narrower than its
+   own min-content. On a phone that let long metadata values and the monospace
+   architecture diagrams push the whole document wider than the viewport, which
+   is what produced the horizontal scroll on the project pages. */
+.card-grid > *,
+.project-grid > *,
+.project-gallery > * {
+  min-width: 0;
+}
+
+/* Long unbroken strings (URLs, package names, hyphenated place names) in the
+   project sidebar wrap instead of setting the column width. */
+.project-meta p,
+.project-meta h4 {
+  overflow-wrap: anywhere;
+}
+
+/* On a phone the cards are already full width, so a 100px horizontal slide
+   buys nothing and parks every un-revealed card outside the viewport, which
+   is what produced the horizontal scroll on the homepage. Reveal vertically
+   instead. */
+@media (max-width: 768px) {
+  .reveal.slide-left,
+  .reveal.slide-right {
+    transform: translateY(24px);
+  }
+  .reveal.slide-left.visible,
+  .reveal.slide-right.visible {
+    transform: translateY(0);
+  }
+}
