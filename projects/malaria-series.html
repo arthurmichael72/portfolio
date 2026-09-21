@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Number, One Poster — A Malaria Data Poster Series — Michael Arthur</title>
+  <meta name="description" content="A nine-poster series on the global malaria burden, built on one rule: one statistic per poster, one purpose-built encoding, nothing else. Information design for a standing audience.">
+  <link rel="canonical" href="https://arthurmichael72.github.io/portfolio/projects/malaria-series.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Michael Arthur">
+  <meta property="og:title" content="One Number, One Poster — A Malaria Data Poster Series">
+  <meta property="og:description" content="A nine-poster series on the global malaria burden, built on one rule: one statistic per poster, one purpose-built encoding, nothing else.">
+  <meta property="og:url" content="https://arthurmichael72.github.io/portfolio/projects/malaria-series.html">
+  <meta property="og:image" content="https://arthurmichael72.github.io/portfolio/images/information-design/malaria-series/1-africans.jpg">
+  <meta property="og:image:alt" content="Africans — a radial isotype of mosquitoes showing that 94% of the world's malaria burden is African">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One Number, One Poster — A Malaria Data Poster Series">
+  <meta name="twitter:description" content="A nine-poster series on the global malaria burden, built on one rule: one statistic per poster, one purpose-built encoding, nothing else.">
+  <meta name="twitter:image" content="https://arthurmichael72.github.io/portfolio/images/information-design/malaria-series/1-africans.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+  <style>
+    /* The posters are portrait and dark; give them room and a dark mat so the
+       black grounds read as intentional rather than as a loading error. */
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 32px 0 8px;
+    }
+    .poster-grid img {
+      width: 100%;
+      display: block;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 14px 30px -20px rgba(0,0,0,.55);
+    }
+    .poster-pair {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 32px 0 8px;
+    }
+    .poster-pair img, .poster-single img {
+      width: 100%;
+      display: block;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 14px 30px -20px rgba(0,0,0,.55);
+    }
+    .poster-single { margin: 32px 0 8px; }
+    .poster-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin: 12px 0 0;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.88rem;
+    }
+    .spec-table th {
+      text-align: left;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0 16px 10px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .spec-table td {
+      padding: 13px 16px 13px 0;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .spec-table td:first-child { font-weight: 600; white-space: nowrap; }
+    @media (max-width: 760px) {
+      .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .poster-grid, .poster-pair { grid-template-columns: 1fr; }
+      .spec-table, .spec-table tbody, .spec-table tr, .spec-table td { display: block; width: auto; }
+      .spec-table thead { display: none; }
+      .spec-table tr { padding: 4px 0 16px; border-bottom: 1px solid var(--border-light); }
+      .spec-table td { border-bottom: 0; padding: 4px 0; }
+      .spec-table td:first-child { white-space: normal; padding-top: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">MICHAEL <span>ARTHUR</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#data-storytelling">Data Storytelling</a></li>
+        <li><a href="../index.html#graphic-design">Graphic Design</a></li>
+        <li><a href="../index.html#information-design">Information Design</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#information-design" class="back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to portfolio
+      </a>
+      <div class="project-hero-content">
+        <p class="project-category">Information Design</p>
+        <h1>One Number, One Poster</h1>
+        <p class="project-subtitle">A Nine-Poster Series on the Global Malaria Burden</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT HERO IMAGE -->
+  <section class="project-hero-image" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="project-image-full gallery-item clickable">
+        <img src="../images/information-design/malaria-series/1-africans.jpg" alt="Africans — a radial isotype of mosquitoes showing that about 94% of the world's malaria burden falls on the African region" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: center; letter-spacing: 0.02em;">Poster one — the whole argument in a single ring: 234 million mosquitoes against everyone else's fifteen</p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+      <img src="" alt="Expanded View" class="lightbox-img" id="lightbox-img">
+      <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- PROJECT CONTENT -->
+  <section class="project-content">
+    <div class="container">
+      <div class="project-grid">
+
+        <!-- SIDEBAR -->
+        <aside class="project-meta">
+          <div class="meta-block">
+            <h4>Role</h4>
+            <p>Information Designer — concept, data, encoding, typography</p>
+          </div>
+          <div class="meta-block">
+            <h4>Format</h4>
+            <p>Nine posters, A-series portrait, designed for wall display and screen</p>
+          </div>
+          <div class="meta-block">
+            <h4>Source</h4>
+            <p>WHO World Malaria Report</p>
+          </div>
+          <div class="meta-block">
+            <h4>Tools</h4>
+            <p>Adobe Illustrator, Helvetica Neue</p>
+          </div>
+          <div class="meta-block">
+            <h4>Tags</h4>
+            <div class="card-tags">
+              <span class="tag">Information Design</span>
+              <span class="tag">ISOTYPE</span>
+              <span class="tag">Poster Series</span>
+              <span class="tag">Public Health</span>
+              <span class="tag">Typography</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="project-body">
+          <h2>Overview</h2>
+          <p>Nine posters on the global malaria burden, built on a single rule: <strong>one statistic per poster, one encoding designed for that statistic, and nothing else on the wall.</strong> No decorative chrome, no second chart competing for attention, no paragraph of context doing the work the picture should do.</p>
+          <p>The set is designed to be read standing up and in sequence. Each poster is a single word ending in a full stop — <em>Africans. Region. Children. Pregnant Women. Symptoms. Although. Financial Challenge. Climate Challenge. Need More Support.</em> — and the nine words, read in order, are the argument.</p>
+
+          <h2>The Problem</h2>
+          <p>Malaria reporting has a scale problem. The headline figures are so large and so familiar that they have stopped landing: 249 million cases, 608,000 deaths, 94% of the burden in one WHO region. A reader nods and moves on. The number has been heard rather than understood.</p>
+          <p>The conventional response is a dashboard — several charts, a map, a legend, a block of explanatory text. That format assumes a seated reader who has chosen to study it. A poster has no such reader. It has someone walking past who will give it a few seconds standing up, and who will either take away one thing or nothing at all.</p>
+          <p>So the design question was not <em>how do I show this data</em>. It was: <strong>what is the single fact this poster is responsible for, and what shape makes that fact impossible to skim past?</strong></p>
+
+          <h2>The Approach</h2>
+          <p>I set three constraints before drawing anything, and held them across all nine:</p>
+          <ul>
+            <li><strong>One statistic, one poster.</strong> If a fact needed a second number to make sense, it needed a second poster. Nothing shares a wall with a competitor.</li>
+            <li><strong>The encoding is built for the fact, not chosen from a menu.</strong> No poster in the set uses a bar chart or a pie. Each shape is derived from what the number is about — mosquitoes, children, rainfall, an ultrasound.</li>
+            <li><strong>Black ground, one accent, Helvetica.</strong> A fixed system so the nine read as a series at a distance, and so the only thing that varies between them is the thing that should vary: the data.</li>
+          </ul>
+
+          <h2>The Design System</h2>
+          <p>Every poster follows the same skeleton, which is what lets them hang together across nine very different visual forms:</p>
+
+          <table class="spec-table">
+            <thead>
+              <tr><th>Element</th><th>Rule</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Headline</td>
+                <td>One word or short phrase, set very large in Helvetica Bold, always closed with a full stop. The stop is doing work — it makes each poster a statement rather than a label, and it gives the sequence its cadence.</td>
+              </tr>
+              <tr>
+                <td>Subhead</td>
+                <td>One sentence carrying the statistic in plain language. Never more than two lines.</td>
+              </tr>
+              <tr>
+                <td>Ground</td>
+                <td>Black on every poster. It removes the page, so the encoding reads as a figure floating in space rather than as a chart sitting in a frame.</td>
+              </tr>
+              <tr>
+                <td>Accent</td>
+                <td>A single hue per poster, chosen for the subject — red for burden, cyan for children and water, green for money and hope, white for clinical symptoms.</td>
+              </tr>
+              <tr>
+                <td>Encoding</td>
+                <td>One only. Built for that poster's number and used nowhere else in the set.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>The Sequence</h2>
+          <p>The nine posters are an argument in three movements: <strong>who carries the burden</strong>, <strong>why it is severe</strong>, and <strong>why it is not being solved</strong>. Read in order they escalate from scale, to intimacy, to consequence, to a demand.</p>
+
+          <h3>Movement one — who</h3>
+          <div class="poster-grid">
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/1-africans.jpg" alt="Africans — radial isotype comparing 234 million African cases with the other WHO regions"></div>
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/2-region.jpg" alt="Region — mosquitoes arranged in the silhouette of Africa, with Nigeria, DRC, Uganda and Mozambique marked"></div>
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/3-children.jpg" alt="Children — an isotype grid where the overwhelming majority of figures are children under five"></div>
+          </div>
+          <p class="poster-caption">Africans · Region · Children — scale, then place, then age</p>
+
+          <p><strong>Africans.</strong> The opening poster has to establish the asymmetry, and a bar chart would flatten it — one long bar and four stubs is a shape people have seen a thousand times. Instead the WHO regions are drawn as rings of mosquitoes, with the African region's 234 million sweeping around almost the full circle while the Americas' 500,000 amount to a single insect. The comparison is spatial rather than numerical: you feel the ring close before you read a figure.</p>
+          <p><strong>Region.</strong> Having established the continent, the next poster narrows to four countries. The mosquitoes are arranged in the silhouette of Africa itself, red for the four countries carrying almost half the burden and pale blue for the rest, with Nigeria's share marked by a single oversized insect sitting where Nigeria sits. The map is made of the thing it is about.</p>
+          <p><strong>Children.</strong> This is the poster where the series stops being about geography. An isotype grid of small figures, overwhelmingly children, with a thin column of adults at the edge. It is the most conventional encoding in the set, deliberately — after two abstract compositions the reader needs something they can count, and the countable thing should be the one that matters most.</p>
+
+          <h3>Movement two — why it is severe</h3>
+          <div class="poster-pair">
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/4-pregnant-women.jpg" alt="Pregnant Women — an ultrasound cone divided to show the share of pregnancies exposed to malaria"></div>
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/5-symptoms.jpg" alt="Symptoms — eight abstract circular glyphs, one per symptom, from headache to jaundice"></div>
+          </div>
+          <p class="poster-caption">Pregnant Women · Symptoms — the encoding borrows the form of the subject</p>
+
+          <p><strong>Pregnant Women.</strong> The proportion of pregnancies exposed to malaria is drawn as an ultrasound cone, divided. It is the sharpest idea in the series: a part-to-whole chart whose outline is the clinical image every reader already associates with pregnancy, so the chart type carries meaning before any value is read.</p>
+          <p><strong>Symptoms.</strong> Eight symptoms, eight generative glyphs inside eight circles — spikes for fever, a dense scribble for anaemia, a thin scatter for diarrhoea. There is no quantity here, which is the point: this is the one poster in the set that is qualitative, and giving it a visual language of its own keeps the reader from trying to read magnitude into it.</p>
+
+          <h3>Movement three — why it is not solved</h3>
+          <div class="poster-grid">
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/6-although.jpg" alt="Although — three intervention icons for insecticide-treated nets, seasonal malaria chemoprevention and vaccines"></div>
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/7-financial-challenge.jpg" alt="Financial Challenge — a diverging fan showing funding received against the funding gap"></div>
+            <div class="gallery-item clickable"><img src="../images/information-design/malaria-series/8-climate-challenge.jpg" alt="Climate Challenge — six droplets growing in scale to show the rise in flooding over a decade"></div>
+          </div>
+          <p class="poster-caption">Although · Financial Challenge · Climate Challenge — the turn, the shortfall, the compounding factor</p>
+
+          <p><strong>Although.</strong> The hinge of the series, and the only poster whose headline is a conjunction — it exists to turn the argument rather than to carry a number. Three interventions, three icons, three short definitions. Its job is to concede the good news so the next two posters land as something other than pessimism.</p>
+          <p><strong>Financial Challenge.</strong> Funding received against the funding gap, drawn as two fans diverging from a single point. A stacked bar would have made the shortfall look like an accounting line. Splitting the fan from one origin makes it read as a fork in the road — the money that arrived and the money that did not, spreading apart.</p>
+          <p><strong>Climate Challenge.</strong> Six droplets scaling up across a decade. The simplest encoding in the series and the most direct: rainfall drawn as rain, growing.</p>
+
+          <h3>The close</h3>
+          <div class="poster-single gallery-item clickable">
+            <img src="../images/information-design/malaria-series/9-need-more-support.jpg" alt="Need More Support — a child's face in near-darkness, with the word Support set in green">
+          </div>
+          <p class="poster-caption">Need More Support — the only poster with a photograph, and the only one with no data</p>
+
+          <p><strong>Need More Support.</strong> After eight posters of abstraction, the series ends on a face. No chart, no figure — a child in near-darkness with the single word <em>Support</em> in green, the same green the funding poster used for money that actually arrived.</p>
+          <p>This is the one deliberate rule-break in the set. Every preceding poster withholds the human image, because leading with a photograph of a sick African child is the oldest and laziest move in global health communication, and it invites pity rather than understanding. Earning that face over eight posters of evidence first changes what it asks for.</p>
+
+          <h2>Key Design Decisions</h2>
+          <ul>
+            <li><strong>No chart type reused.</strong> Nine posters, nine encodings: radial isotype, map-shaped isotype, grid isotype, sectioned ultrasound, generative glyphs, icon set, diverging fan, scaled droplets, photograph. The discipline forced each number to be interrogated on its own terms rather than dropped into a default.</li>
+            <li><strong>The full stop as punctuation for the eye.</strong> <em>Africans.</em> not <em>Africans</em>. It closes each poster, and it is what makes nine separate sheets read as sentences in one paragraph when they are hung in a row.</li>
+            <li><strong>Black ground as an accessibility decision, not a mood.</strong> High-contrast white and saturated accents on black stay legible under the uneven lighting of a conference corridor or a hospital corridor, which is where work like this actually hangs.</li>
+            <li><strong>The subject supplies the shape.</strong> Mosquitoes count mosquito-borne cases. An ultrasound cone carries a statistic about pregnancy. Droplets measure rainfall. The reader decodes the metaphor before they decode the chart, which buys attention for the number.</li>
+            <li><strong>One qualitative poster, clearly signalled.</strong> <em>Symptoms</em> carries no magnitude, so it gets a visual language shared with nothing else in the set — circles and line-work rather than counted units — so nobody reads quantity into a list.</li>
+            <li><strong>The photograph is withheld until it is earned.</strong> Sequencing as an ethical decision: the series argues its case with evidence and only then shows a person, so the final poster reads as a demand on stakeholders rather than an appeal for sympathy.</li>
+          </ul>
+
+          <h2>What I'd Change</h2>
+          <p>Two things I would tighten in a second edition, both of the same kind — places where the drawing and the label do not quite agree.</p>
+          <ul>
+            <li>On <em>Children</em>, the isotype grid draws 88 figures against 16, which is 85%, while the subhead states 80%. The grid should be redrawn to 80 and 20 so the count and the caption agree exactly. An isotype's whole claim is that it is countable, and a reader who counts it should not find a different answer.</li>
+            <li>On <em>Pregnant Women</em>, the divided cone shows a proportion but the poster states only the numerator — 13 million pregnancies. The denominator should be on the sheet, or the encoding should be absolute rather than part-to-whole.</li>
+          </ul>
+
+          <h2>What This Project Demonstrates</h2>
+          <ul>
+            <li><strong>Encoding judgement.</strong> Choosing, and building, a different visual form for each of nine statistics — and being able to say why a bar chart was wrong in each case.</li>
+            <li><strong>Systems thinking in a static medium.</strong> A fixed typographic and colour system holding together nine unlike compositions so they read as one body of work from across a room.</li>
+            <li><strong>Sequence as argument.</strong> Treating a set of posters as a structured case with a turn and a close, not as nine standalone graphics.</li>
+            <li><strong>Restraint.</strong> One number per sheet, in a field whose default is to put everything on one sheet.</li>
+            <li><strong>Ethical framing in health communication.</strong> Deciding when a human image helps and when it substitutes for an argument.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Michael Arthur.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    // Lightbox Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("lightbox-close");
+      const prevBtn = document.getElementById("lightbox-prev");
+      const nextBtn = document.getElementById("lightbox-next");
+
+      const galleryItems = Array.from(document.querySelectorAll(".gallery-item.clickable img"));
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = galleryItems[currentIndex].src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        lightboxImg.src = galleryItems[currentIndex].src;
+      }
+
+      galleryItems.forEach((img, index) => {
+        img.parentElement.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+      });
+    });
+  </script>
+</body>
+</html>
