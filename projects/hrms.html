@@ -44,6 +44,89 @@
     .arch .amber {
       color: #f0a06a;
     }
+    /* --- Inline wireframe figures --- */
+    .wf-figure {
+      margin: 36px 0;
+    }
+    .wf-frame {
+      background: #fdfcfa;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 6px;
+      cursor: zoom-in;
+      transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+    .wf-frame:hover,
+    .wf-frame:focus-visible {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-medium);
+      outline: none;
+    }
+    .wf-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .wf-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      text-align: center;
+    }
+    .wf-zoom {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(22, 26, 32, 0.93);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+      cursor: zoom-out;
+    }
+    .wf-zoom.active { display: flex; }
+    /* flex: none — otherwise the flex container shrinks the enlarged
+       wireframe back down to the viewport instead of letting it scroll. */
+    .wf-zoom-inner {
+      width: min(96vw, 1400px, 118vh);
+      flex: none;
+    }
+    .wf-zoom-inner svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #fdfcfa;
+      border-radius: 10px;
+    }
+    .wf-zoom-close {
+      /* fixed, not absolute — the overlay scrolls when the wireframe is
+         panned, and the close control must stay where it was. */
+      position: fixed;
+      z-index: 1;
+      top: 18px;
+      right: 26px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1;
+      opacity: 0.75;
+    }
+    .wf-zoom-close:hover { opacity: 1; }
+    /* On a phone the figure is too dense to read in place, and an overlay
+       fitted to the screen is no better — so enlarge past the viewport and
+       let the wireframe be panned. */
+    @media (max-width: 900px) {
+      .wf-caption::after {
+        content: " · tap to enlarge";
+        color: var(--teal);
+      }
+      .wf-zoom {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 56px 16px 24px;
+      }
+      .wf-zoom-inner { width: 1040px; }
+    }
   </style>
 </head>
 <body>
@@ -166,6 +249,631 @@
           </ul>
           <p>The system was built phase by phase — foundation, employee records and self-service, leave, the payroll engine, pay runs and payslips, then onboarding, performance, documents, dashboards, and hardening — with each phase reviewed and tested before the next. The payroll engine had its own sign-off gate: it wasn't allowed to advance until it reproduced the expected PAYE, SSNIT, and net figures for sample employees across the salary range, to the cedi.</p>
 
+          <!-- WIREFRAMES:START — SVG is inlined so it uses the page's Montserrat.
+               Source files live in images/product-design/hrms/. -->
+          <h2>Wireframes</h2>
+          <p>Payroll is where a layout decision becomes a legal one, so these carry the rules as well as the boxes. The shell shows a sidebar that is really the permission model; the pay-run study follows a month from an editable draft to a locked, rates-stamped record, and puts the PAYE band arithmetic on the payslip where a non-specialist can check it; the third panel sets the three roles side by side, because least privilege is something you can see before it is something you can test.</p>
+
+          <div class="wf-figure">
+            <div class="wf-frame" role="button" tabindex="0" aria-label="Enlarge wireframe">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" style="font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif" role="img" aria-label="CLCD-HRMS &#8212; desktop shell / HR dashboard">
+<rect x="0" y="0" width="1200" height="900" rx="0" fill="#fdfcfa"/>
+<text x="40" y="28" font-size="13.5" fill="#02605b" font-weight="600" text-anchor="start" letter-spacing="2.4">CLCD-HRMS &#8212; DESKTOP SHELL / HR DASHBOARD</text>
+<text x="1160" y="28" font-size="12" fill="#8f8a7e" font-weight="500" text-anchor="end" letter-spacing="1.8">WIREFRAME &#183; 1440 GRID</text>
+<line x1="40" y1="42" x2="1160" y2="42" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="40" y="62" width="1120" height="664" rx="10" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.5"/>
+<rect x="250" y="112" width="910" height="614" rx="0" fill="#fbfaf7"/>
+<rect x="40" y="62" width="210" height="664" rx="10" fill="#05564c"/>
+<rect x="220" y="62" width="30" height="664" rx="0" fill="#05564c"/>
+<rect x="62" y="76" width="26" height="26" rx="7" fill="#ffffff" opacity="0.14"/>
+<circle cx="75" cy="89" r="6" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+<text x="96" y="93" font-size="13.5" fill="#ffffff" font-weight="700" text-anchor="start">CLCD-HRMS</text>
+<line x1="40" y1="112" x2="250" y2="112" stroke="#ffffff" stroke-width="1"/>
+<rect x="40" y="111.5" width="210" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<rect x="52" y="124" width="186" height="25" rx="5" fill="#ffffff" opacity="0.15"/>
+<rect x="52" y="124" width="3.5" height="25" rx="1.5" fill="#d16a33"/>
+<rect x="64" y="130.5" width="12" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.15"/>
+<text x="84" y="141" font-size="11" fill="#ffffff" font-weight="600" text-anchor="start">Dashboard</text>
+<rect x="64" y="160.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="171" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">My Profile</text>
+<rect x="64" y="190.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="201" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Employees</text>
+<rect x="64" y="220.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="231" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Leave</text>
+<rect x="64" y="250.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="261" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Attendance</text>
+<rect x="64" y="280.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="291" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">My Payslips</text>
+<rect x="64" y="310.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="321" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Payroll</text>
+<rect x="64" y="340.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="351" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Onboarding</text>
+<rect x="64" y="370.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="381" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Performance &amp; Tasks</text>
+<rect x="64" y="400.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="411" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Announcements</text>
+<rect x="64" y="430.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="441" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Documents</text>
+<rect x="64" y="460.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="471" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Assets</text>
+<rect x="64" y="490.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="501" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Finance</text>
+<rect x="64" y="520.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="531" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Internship</text>
+<rect x="64" y="550.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="561" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">My Report</text>
+<rect x="64" y="580.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="591" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Reports</text>
+<rect x="64" y="610.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="621" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Help &amp; Manual</text>
+<rect x="64" y="640.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="84" y="651" font-size="11" fill="#cfe0da" font-weight="400" text-anchor="start">Settings</text>
+<rect x="40" y="671.5" width="210" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<text x="62" y="690" font-size="10.5" fill="#ffffff" font-weight="500" text-anchor="start">Kwame Sakyi</text>
+<text x="62" y="702" font-size="8.5" fill="#cfe0da" font-weight="400" text-anchor="start">Admin</text>
+<rect x="62" y="711" width="11" height="11" rx="2.5" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="82" y="720" font-size="10" fill="#cfe0da" font-weight="400" text-anchor="start">Sign out</text>
+<line x1="250" y1="112" x2="1160" y2="112" stroke="#e2ddd3" stroke-width="1.2"/>
+<rect x="274" y="74" width="400" height="28" rx="8" fill="#f7f5f1" stroke="#e2ddd3" stroke-width="1.1"/>
+<circle cx="292" cy="88" r="4.5" fill="none" stroke="#8f8a7e" stroke-width="1.3"/>
+<line x1="295.24" y1="91.24" x2="299.65" y2="95.65" stroke="#8f8a7e" stroke-width="1.3"/>
+<text x="308" y="92" font-size="11" fill="#8f8a7e" font-weight="400" text-anchor="start">Search&#8230;</text>
+<rect x="856" y="76" width="84" height="24" rx="12.0" fill="#e3efed" stroke="#bcd9d5" stroke-width="1"/>
+<text x="898.0" y="91.24" font-size="9" fill="#02605b" font-weight="600" text-anchor="middle"></text>
+<path d="M864 82 a 6.5 6.5 0 0 1 10 0" fill="none" stroke="#02605b" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M866.4 85.3 a 3.7 3.7 0 0 1 5.2 0" fill="none" stroke="#02605b" stroke-width="1.3" stroke-linecap="round"/>
+<circle cx="869" cy="88.8" r="1.2" fill="#02605b"/>
+<text x="884" y="92" font-size="11" fill="#02605b" font-weight="600" text-anchor="start">Online</text>
+<path d="M976 92 a 7 7 0 1 1 -4 -10 a 6 6 0 0 0 4 10 z" fill="none" stroke="#8f8a7e" stroke-width="1.2"/>
+<path d="M1000 94 q0 -12 6 -12 q6 0 6 12 z" fill="none" stroke="#8f8a7e" stroke-width="1.3"/>
+<circle cx="1006" cy="79" r="1.5" fill="#8f8a7e"/>
+<circle cx="1014" cy="80" r="6.5" fill="#d16a33"/>
+<text x="1014" y="83" font-size="7.5" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+<circle cx="1060" cy="88" r="13" fill="#05564c"/>
+<text x="1060" y="92" font-size="9.5" fill="#ffffff" font-weight="700" text-anchor="middle">KS</text>
+<path d="M1082 85.0 l4 4 l4 -4" fill="none" stroke="#8f8a7e" stroke-width="1.3"/>
+<text x="276" y="164" font-size="20" fill="#394a62" font-weight="700" text-anchor="start">Dashboard</text>
+<text x="276" y="182" font-size="10.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Welcome back, Kwame Sakyi</text>
+<rect x="276" y="198" width="204" height="88" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.2"/>
+<rect x="290" y="212" width="24" height="24" rx="6" fill="#e3efed"/>
+<rect x="296" y="218" width="12" height="12" rx="2.5" fill="none" stroke="#02605b" stroke-width="1.3"/>
+<text x="322" y="228" font-size="10.5" fill="#5c6b80" font-weight="500" text-anchor="start">Active employees</text>
+<text x="290" y="262" font-size="21" fill="#394a62" font-weight="700" text-anchor="start">24</text>
+<text x="290" y="276" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">26 total</text>
+<rect x="494" y="198" width="204" height="88" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.2"/>
+<rect x="508" y="212" width="24" height="24" rx="6" fill="#fbeee4"/>
+<rect x="514" y="218" width="12" height="12" rx="2.5" fill="none" stroke="#d16a33" stroke-width="1.3"/>
+<text x="540" y="228" font-size="10.5" fill="#5c6b80" font-weight="500" text-anchor="start">Pending leave</text>
+<text x="508" y="262" font-size="21" fill="#394a62" font-weight="700" text-anchor="start">3</text>
+<text x="508" y="276" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">awaiting approval</text>
+<rect x="712" y="198" width="204" height="88" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.2"/>
+<rect x="726" y="212" width="24" height="24" rx="6" fill="#e3efed"/>
+<rect x="732" y="218" width="12" height="12" rx="2.5" fill="none" stroke="#02605b" stroke-width="1.3"/>
+<text x="758" y="228" font-size="10.5" fill="#5c6b80" font-weight="500" text-anchor="start">Leave liability</text>
+<text x="726" y="262" font-size="21" fill="#394a62" font-weight="700" text-anchor="start">182</text>
+<text x="726" y="276" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">paid days remaining, 2026</text>
+<rect x="930" y="198" width="204" height="88" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.2"/>
+<rect x="944" y="212" width="24" height="24" rx="6" fill="#fbeee4"/>
+<rect x="950" y="218" width="12" height="12" rx="2.5" fill="none" stroke="#d16a33" stroke-width="1.3"/>
+<text x="976" y="228" font-size="10.5" fill="#5c6b80" font-weight="500" text-anchor="start">Last payroll</text>
+<text x="944" y="262" font-size="18" fill="#394a62" font-weight="700" text-anchor="start">&#8373;118,400</text>
+<text x="944" y="276" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">July 2026 gross</text>
+<rect x="276" y="300" width="858" height="170" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.2"/>
+<text x="292" y="324" font-size="11.5" fill="#394a62" font-weight="700" text-anchor="start">Payroll cost trend</text>
+<text x="1118" y="324" font-size="9.5" fill="#02605b" font-weight="600" text-anchor="end">Reports &#8594;</text>
+<rect x="334" y="389.92" width="52" height="52.08" rx="4" fill="#bcd9d5"/>
+<text x="360" y="383.92" font-size="8" fill="#02605b" font-weight="600" text-anchor="middle">&#8373;76k</text>
+<text x="360" y="456" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="middle">Feb 26</text>
+<rect x="472" y="386.56" width="52" height="55.440000000000005" rx="4" fill="#bcd9d5"/>
+<text x="498" y="380.56" font-size="8" fill="#02605b" font-weight="600" text-anchor="middle">&#8373;81k</text>
+<text x="498" y="456" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="middle">Mar 26</text>
+<rect x="610" y="388.24" width="52" height="53.76" rx="4" fill="#bcd9d5"/>
+<text x="636" y="382.24" font-size="8" fill="#02605b" font-weight="600" text-anchor="middle">&#8373;79k</text>
+<text x="636" y="456" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="middle">Apr 26</text>
+<rect x="748" y="376.48" width="52" height="65.52" rx="4" fill="#bcd9d5"/>
+<text x="774" y="370.48" font-size="8" fill="#02605b" font-weight="600" text-anchor="middle">&#8373;96k</text>
+<text x="774" y="456" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="middle">May 26</text>
+<rect x="886" y="373.12" width="52" height="68.88" rx="4" fill="#bcd9d5"/>
+<text x="912" y="367.12" font-size="8" fill="#02605b" font-weight="600" text-anchor="middle">&#8373;101k</text>
+<text x="912" y="456" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="middle">Jun 26</text>
+<rect x="1024" y="362.2" width="52" height="79.8" rx="4" fill="#bcd9d5"/>
+<text x="1050" y="356.2" font-size="8" fill="#02605b" font-weight="600" text-anchor="middle">&#8373;117k</text>
+<text x="1050" y="456" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="middle">Jul 26</text>
+<line x1="292" y1="442" x2="1118" y2="442" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="276" y="486" width="421" height="200" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.2"/>
+<text x="292" y="510" font-size="11.5" fill="#394a62" font-weight="700" text-anchor="start">Headcount by department</text>
+<text x="292" y="540" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Operations &amp; Programmes</text>
+<text x="681" y="540" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">9</text>
+<rect x="292" y="546" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="292" y="546" width="389.0" height="6" rx="3.0" fill="#d16a33"/>
+<text x="292" y="570" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Research</text>
+<text x="681" y="570" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">6</text>
+<rect x="292" y="576" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="292" y="576" width="260.63" height="6" rx="3.0" fill="#d16a33"/>
+<text x="292" y="600" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Finance &amp; Admin</text>
+<text x="681" y="600" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">4</text>
+<rect x="292" y="606" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="292" y="606" width="171.16" height="6" rx="3.0" fill="#d16a33"/>
+<text x="292" y="630" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Community Health</text>
+<text x="681" y="630" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">3</text>
+<rect x="292" y="636" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="292" y="636" width="128.37" height="6" rx="3.0" fill="#d16a33"/>
+<text x="292" y="660" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Monitoring</text>
+<text x="681" y="660" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">2</text>
+<rect x="292" y="666" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="292" y="666" width="85.58" height="6" rx="3.0" fill="#d16a33"/>
+<rect x="713" y="486" width="421" height="200" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.2"/>
+<text x="729" y="510" font-size="11.5" fill="#394a62" font-weight="700" text-anchor="start">Leave liability by type (2026)</text>
+<text x="729" y="540" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Annual</text>
+<text x="1118" y="540" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">96 days</text>
+<rect x="729" y="546" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="729" y="546" width="389.0" height="6" rx="3.0" fill="#bcd9d5"/>
+<text x="729" y="570" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Sick</text>
+<text x="1118" y="570" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">42 days</text>
+<rect x="729" y="576" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="729" y="576" width="171.16" height="6" rx="3.0" fill="#bcd9d5"/>
+<text x="729" y="600" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Maternity</text>
+<text x="1118" y="600" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">30 days</text>
+<rect x="729" y="606" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="729" y="606" width="120.59" height="6" rx="3.0" fill="#bcd9d5"/>
+<text x="729" y="630" font-size="9.5" fill="#5c6b80" font-weight="500" text-anchor="start">Compassionate</text>
+<text x="1118" y="630" font-size="9.5" fill="#394a62" font-weight="600" text-anchor="end">14 days</text>
+<rect x="729" y="636" width="389" height="6" rx="3.0" fill="#f4f1eb"/>
+<rect x="729" y="636" width="58.349999999999994" height="6" rx="3.0" fill="#bcd9d5"/>
+<circle cx="250" cy="430" r="13" fill="#9f1c20" stroke="#ffffff" stroke-width="2"/>
+<text x="250" y="434.68" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+<circle cx="846" cy="88" r="13" fill="#9f1c20" stroke="#ffffff" stroke-width="2"/>
+<text x="846" y="92.68" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">2</text>
+<circle cx="680" cy="88" r="13" fill="#9f1c20" stroke="#ffffff" stroke-width="2"/>
+<text x="680" y="92.68" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+<circle cx="268" cy="202" r="13" fill="#9f1c20" stroke="#ffffff" stroke-width="2"/>
+<text x="268" y="206.68" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">4</text>
+<circle cx="268" cy="306" r="13" fill="#9f1c20" stroke="#ffffff" stroke-width="2"/>
+<text x="268" y="310.68" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">5</text>
+<circle cx="250" cy="694" r="13" fill="#9f1c20" stroke="#ffffff" stroke-width="2"/>
+<text x="250" y="698.68" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">6</text>
+<circle cx="52" cy="772" r="12" fill="#9f1c20"/>
+<text x="52" y="776.4" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+<text x="74" y="777" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">Nineteen modules, filtered by role</text>
+<text x="74" y="797" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">An administrator sees eighteen of them; an employee&#8217;s sidebar is</text>
+<text x="74" y="812" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">eleven items long. The nav is the permission model, visible.</text>
+<circle cx="440" cy="772" r="12" fill="#9f1c20"/>
+<text x="440" y="776.4" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">2</text>
+<text x="462" y="777" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">Connection stated &#8212; and payroll gated on it</text>
+<text x="462" y="797" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">Online, Offline or Syncing sits in the header, and a pay run</text>
+<text x="462" y="812" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">refuses to generate or finalise rather than fail halfway.</text>
+<circle cx="828" cy="772" r="12" fill="#9f1c20"/>
+<text x="828" y="776.4" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+<text x="850" y="777" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">One search across the whole record</text>
+<text x="850" y="797" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">People, leave, payslips and documents from any screen:</text>
+<text x="850" y="812" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">an administrator arrives with a name, not a module.</text>
+<circle cx="52" cy="840" r="12" fill="#9f1c20"/>
+<text x="52" y="844.4" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">4</text>
+<text x="74" y="845" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">The four numbers an administrator answers for</text>
+<text x="74" y="865" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">Headcount, leave awaiting a decision, the paid-days</text>
+<text x="74" y="880" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">liability carried, and last month&#8217;s payroll cost.</text>
+<circle cx="440" cy="840" r="12" fill="#9f1c20"/>
+<text x="440" y="844.4" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">5</text>
+<text x="462" y="845" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">Cost over time, not only this month</text>
+<text x="462" y="865" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">Payroll is what a director and a funder ask about, so the</text>
+<text x="462" y="880" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">trend sits on the home screen, not inside a report.</text>
+<circle cx="828" cy="840" r="12" fill="#9f1c20"/>
+<text x="828" y="844.4" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">6</text>
+<text x="850" y="845" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">Signed in as, and as what</text>
+<text x="850" y="865" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">The footer names the account and its role. Nothing</text>
+<text x="850" y="880" font-size="11" fill="#6f6a60" font-weight="400" text-anchor="start">about who you are, or what you may do, is implicit.</text>
+</svg>
+            </div>
+            <p class="wf-caption">Desktop shell &#8212; a role-filtered sidebar, connection state in the header, and the four numbers an administrator answers for</p>
+          </div>
+
+          <div class="wf-figure">
+            <div class="wf-frame" role="button" tabindex="0" aria-label="Enlarge wireframe">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" style="font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif" role="img" aria-label="CLCD-HRMS &#8212; pay run / payslip">
+<rect x="0" y="0" width="1200" height="900" rx="0" fill="#fdfcfa"/>
+<text x="40" y="28" font-size="13.5" fill="#02605b" font-weight="600" text-anchor="start" letter-spacing="2.4">CLCD-HRMS &#8212; PAY RUN / PAYSLIP</text>
+<text x="1160" y="28" font-size="12" fill="#8f8a7e" font-weight="500" text-anchor="end" letter-spacing="1.8">WIREFRAME &#183; STATUTORY PAYROLL</text>
+<line x1="40" y1="42" x2="1160" y2="42" stroke="#e2ddd3" stroke-width="1"/>
+<text x="40" y="82" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">A &#183; Pay run &#8212; draft, and offline</text>
+<rect x="40" y="96" width="690" height="452" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.4"/>
+<rect x="40" y="96" width="690" height="452" rx="10" fill="#fbfaf7"/>
+<rect x="40" y="96" width="690" height="452" rx="10" fill="none" stroke="#e2ddd3" stroke-width="1.4"/>
+<text x="62" y="122" font-size="9" fill="#02605b" font-weight="600" text-anchor="start">&#8592; Back to payroll</text>
+<text x="62" y="152" font-size="19" fill="#394a62" font-weight="700" text-anchor="start">July 2026</text>
+<rect x="158" y="138" width="58" height="20" rx="10.0" fill="#fbf3e2"/>
+<text x="187.0" y="151.24" font-size="9" fill="#8a6a1e" font-weight="600" text-anchor="middle">draft</text>
+<text x="62" y="170" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">Rates</text>
+<text x="92" y="170" font-size="9" fill="#5c6b80" font-weight="500" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace">2026-v1</text>
+<rect x="426" y="134" width="96" height="26" rx="6" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.1"/>
+<text x="474" y="151" font-size="9" fill="#5c6b80" font-weight="600" text-anchor="middle">Export CSV</text>
+<rect x="530" y="134" width="90" height="26" rx="6" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.1" opacity="0.55"/>
+<text x="575" y="151" font-size="9" fill="#8f8a7e" font-weight="600" text-anchor="middle">Regenerate</text>
+<rect x="628" y="134" width="80" height="26" rx="6" fill="#9fc0b8"/>
+<text x="668" y="151" font-size="9" fill="#ffffff" font-weight="700" text-anchor="middle">Finalise</text>
+<rect x="62" y="184" width="646" height="34" rx="7" fill="#fbeee4" stroke="#eecfba" stroke-width="1.1"/>
+<path d="M78 195 a 6.5 6.5 0 0 1 10 0" fill="none" stroke="#d16a33" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M80.4 198.3 a 3.7 3.7 0 0 1 5.2 0" fill="none" stroke="#d16a33" stroke-width="1.3" stroke-linecap="round"/>
+<circle cx="83" cy="201.8" r="1.2" fill="#d16a33"/>
+<path d="M76 204 L90 190" fill="none" stroke="#d16a33" stroke-width="1.4" stroke-linecap="round"/>
+<text x="100" y="205" font-size="9.5" fill="#9a4f22" font-weight="500" text-anchor="start">You&#8217;re offline &#8212; generating and finalising are disabled until you reconnect.</text>
+<rect x="62" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="74" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Employees</text>
+<text x="74" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">24</text>
+<rect x="226" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="238" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Gross</text>
+<text x="238" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;118,400</text>
+<rect x="390" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="402" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">PAYE (GRA)</text>
+<text x="402" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;19,842</text>
+<rect x="554" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="566" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">SSNIT employee</text>
+<text x="566" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;5,676</text>
+<rect x="62" y="288" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="74" y="306" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">SSNIT employer</text>
+<text x="74" y="325" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;13,416</text>
+<rect x="226" y="288" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="238" y="306" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Tier 2</text>
+<text x="238" y="325" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;5,160</text>
+<rect x="390" y="288" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="402" y="306" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Net pay</text>
+<text x="402" y="325" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;92,882</text>
+<rect x="62" y="352" width="646" height="176" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<rect x="62" y="352" width="646" height="26" rx="8" fill="#f4f1eb"/>
+<rect x="62" y="370" width="646" height="8" rx="0" fill="#f4f1eb"/>
+<text x="78" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="start" letter-spacing="0.4">Employee</text>
+<text x="308" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Basic</text>
+<text x="396" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Gross</text>
+<text x="476" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">SSNIT</text>
+<text x="556" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">PAYE</text>
+<text x="636" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Net</text>
+<text x="690" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Actions</text>
+<text x="78" y="397" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Kwame Sakyi</text>
+<text x="308" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">4,800</text>
+<text x="396" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">5,400</text>
+<text x="476" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">264</text>
+<text x="556" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">883</text>
+<text x="636" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">4,254</text>
+<text x="660" y="397" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="397" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<rect x="62" y="407" width="646" height="29" rx="0" fill="#fcfbf9"/>
+<text x="78" y="426" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Akosua Frimpong</text>
+<text x="308" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">3,600</text>
+<text x="396" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">4,050</text>
+<text x="476" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">198</text>
+<text x="556" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">565</text>
+<text x="636" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">3,287</text>
+<text x="660" y="426" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="426" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<text x="78" y="455" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Yaw Darko</text>
+<text x="308" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,900</text>
+<text x="396" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">3,200</text>
+<text x="476" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">160</text>
+<text x="556" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">423</text>
+<text x="636" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,618</text>
+<text x="660" y="455" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="455" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<rect x="62" y="465" width="646" height="29" rx="0" fill="#fcfbf9"/>
+<text x="78" y="484" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Abena Owusu</text>
+<text x="308" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,400</text>
+<text x="396" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,640</text>
+<text x="476" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">132</text>
+<text x="556" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">330</text>
+<text x="636" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,178</text>
+<text x="660" y="484" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="484" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<text x="78" y="513" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Kojo Baffour</text>
+<text x="308" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">1,850</text>
+<text x="396" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,000</text>
+<text x="476" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">102</text>
+<text x="556" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">223</text>
+<text x="636" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">1,675</text>
+<text x="660" y="513" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="513" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<text x="750" y="82" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">B &#183; Payslip &#8212; the working, shown</text>
+<rect x="750" y="96" width="410" height="640" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.4"/>
+<text x="770" y="124" font-size="13" fill="#02605b" font-weight="700" text-anchor="start">CLCD Ghana</text>
+<text x="770" y="138" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip &#183; July 2026</text>
+<text x="1140" y="122" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="end">Rates version</text>
+<text x="1140" y="136" font-size="9" fill="#5c6b80" font-weight="500" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace">2026-v1</text>
+<line x1="770" y1="150" x2="1140" y2="150" stroke="#e2ddd3" stroke-width="1"/>
+<text x="770" y="170" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Employee</text>
+<text x="770" y="182" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Kwame Sakyi</text>
+<text x="960" y="170" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Staff ID</text>
+<text x="960" y="182" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">CLCD-014</text>
+<text x="770" y="200" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Ghana Card</text>
+<text x="770" y="212" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">GHA-7248-3</text>
+<text x="960" y="200" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">SSNIT No.</text>
+<text x="960" y="212" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">C0134928</text>
+<line x1="770" y1="238" x2="1140" y2="238" stroke="#e2ddd3" stroke-width="1"/>
+<text x="770" y="260" font-size="8" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="0.7">EARNINGS</text>
+<text x="770" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Basic salary</text>
+<text x="940" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">4,800.00</text>
+<text x="770" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Allowances</text>
+<text x="940" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">600.00</text>
+<text x="770" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Overtime</text>
+<text x="940" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">0.00</text>
+<text x="770" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="start">Gross pay</text>
+<text x="940" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="end">5,400.00</text>
+<line x1="770" y1="315" x2="940" y2="315" stroke="#e2ddd3" stroke-width="1"/>
+<text x="968" y="260" font-size="8" fill="#d16a33" font-weight="700" text-anchor="start" letter-spacing="0.7">DEDUCTIONS</text>
+<text x="968" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">SSNIT (employee 5.5%)</text>
+<text x="1120" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">264.00</text>
+<text x="968" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">PAYE (income tax)</text>
+<text x="1120" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">882.50</text>
+<text x="968" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Loan / advance</text>
+<text x="1120" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">0.00</text>
+<text x="968" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="start">Total deductions</text>
+<text x="1120" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="end">1,146.50</text>
+<line x1="968" y1="315" x2="1120" y2="315" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="770" y="342" width="370" height="32" rx="6" fill="#e3efed"/>
+<text x="782" y="362" font-size="10.5" fill="#02605b" font-weight="700" text-anchor="start">Net pay</text>
+<text x="1128" y="362" font-size="13" fill="#02605b" font-weight="700" text-anchor="end">&#8373;4,253.50</text>
+<text x="770" y="396" font-size="8" fill="#5c6b80" font-weight="700" text-anchor="start" letter-spacing="0.7">HOW THE PAYE WAS REACHED</text>
+<text x="770" y="410" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">Taxable income = gross &#8722; SSNIT employee = &#8373;5,136.00</text>
+<rect x="770" y="420" width="370" height="133" rx="7" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="782" y="438" font-size="7.5" fill="#8f8a7e" font-weight="600" text-anchor="start" letter-spacing="0.4">Band</text>
+<text x="968" y="438" font-size="7.5" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Rate</text>
+<text x="1128" y="438" font-size="7.5" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Tax</text>
+<text x="782" y="456" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">First 490</text>
+<text x="968" y="456" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">0%</text>
+<text x="1128" y="456" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">0.00</text>
+<text x="782" y="473" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 110</text>
+<text x="968" y="473" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">5%</text>
+<text x="1128" y="473" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">5.50</text>
+<text x="782" y="490" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 130</text>
+<text x="968" y="490" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">10%</text>
+<text x="1128" y="490" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">13.00</text>
+<text x="782" y="507" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 3,166.67</text>
+<text x="968" y="507" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">17.5%</text>
+<text x="1128" y="507" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">554.17</text>
+<text x="782" y="524" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 1,239.33</text>
+<text x="968" y="524" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">25%</text>
+<text x="1128" y="524" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">309.83</text>
+<line x1="782" y1="536" x2="1128" y2="536" stroke="#e2ddd3" stroke-width="1"/>
+<text x="782" y="551" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="start">PAYE total</text>
+<text x="1128" y="551" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="end">882.50</text>
+<text x="770" y="566" font-size="8" fill="#5c6b80" font-weight="700" text-anchor="start" letter-spacing="0.7">SSNIT PENSION CONTRIBUTIONS</text>
+<text x="770" y="584" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Employee (5.5%, deducted above)</text>
+<text x="1140" y="584" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">264.00</text>
+<text x="770" y="599" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Employer (13%, paid by CLCD &#8212; not deducted from you)</text>
+<text x="1140" y="599" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">624.00</text>
+<text x="770" y="614" font-size="7.5" fill="#394a62" font-weight="600" text-anchor="start">Total (18.5% of basic)</text>
+<text x="1140" y="614" font-size="7.5" fill="#394a62" font-weight="600" text-anchor="end">888.00</text>
+<line x1="770" y1="636" x2="1140" y2="636" stroke="#e2ddd3" stroke-width="1"/>
+<text x="770" y="652" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Tier 1 &#8212; SSNIT (13.5%)</text>
+<text x="1140" y="652" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">648.00</text>
+<text x="770" y="667" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Tier 2 &#8212; approved trustee (5%)</text>
+<text x="1140" y="667" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">240.00</text>
+<rect x="770" y="674" width="370" height="34" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="782" y="688" font-size="7.5" fill="#8f8a7e" font-weight="500" text-anchor="start">NHIL (2.5%) is an employer levy in Ghana.</text>
+<text x="782" y="699" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">It is reported as an employer cost, never as your deduction.</text>
+<text x="40" y="602" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">C &#183; The same run, finalised</text>
+<rect x="40" y="616" width="690" height="112" rx="10" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1.4"/>
+<text x="62" y="650" font-size="19" fill="#394a62" font-weight="700" text-anchor="start">July 2026</text>
+<rect x="158" y="636" width="74" height="20" rx="10.0" fill="#e3efed"/>
+<text x="195.0" y="649.24" font-size="9" fill="#02605b" font-weight="600" text-anchor="middle">finalised</text>
+<text x="62" y="668" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">Rates</text>
+<text x="92" y="668" font-size="9" fill="#5c6b80" font-weight="500" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace">2026-v1</text>
+<text x="144" y="668" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">&#183; Finalised 31 Jul 2026, 16:20 by Kwame Sakyi</text>
+<rect x="612" y="632" width="96" height="26" rx="6" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.1"/>
+<text x="660" y="649" font-size="9" fill="#5c6b80" font-weight="600" text-anchor="middle">Export CSV</text>
+<rect x="62" y="684" width="646" height="28" rx="6" fill="#f4f1eb" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="78" y="692" width="9" height="7" rx="1.5" fill="none" stroke="#8f8a7e" stroke-width="1.2"/>
+<path d="M80 692 a 2.5 3 0 0 1 5 0" fill="none" stroke="#8f8a7e" stroke-width="1.2"/>
+<text x="94" y="702" font-size="9" fill="#5c6b80" font-weight="500" text-anchor="start">This pay run is finalised and locked. Generate, Adjust and Delete are gone &#8212; not disabled.</text>
+<rect x="40" y="764" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="40" y="786" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Every figure is produced by a pure calculation module that was tested against known-good sample employees before it</text>
+<text x="40" y="801" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">was wired to a screen. The run pins its rates version, so a payslip issued today still reconciles after the bands move.</text>
+<rect x="750" y="764" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="750" y="786" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">A payslip that shows its working. The band table is</text>
+<text x="750" y="801" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">not decoration: it is how a non-specialist checks the</text>
+<text x="750" y="816" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">number, and how an employee can see it is right.</text>
+</svg>
+            </div>
+            <p class="wf-caption">Pay run and payslip &#8212; the offline gate, the statutory totals, and a payslip that shows how its PAYE was reached</p>
+          </div>
+
+          <div class="wf-figure">
+            <div class="wf-frame" role="button" tabindex="0" aria-label="Enlarge wireframe">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" style="font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif" role="img" aria-label="CLCD-HRMS &#8212; the same app, three roles">
+<rect x="0" y="0" width="1200" height="800" rx="0" fill="#fdfcfa"/>
+<text x="40" y="28" font-size="13.5" fill="#02605b" font-weight="600" text-anchor="start" letter-spacing="2.4">CLCD-HRMS &#8212; THE SAME APP, THREE ROLES</text>
+<text x="1160" y="28" font-size="12" fill="#8f8a7e" font-weight="500" text-anchor="end" letter-spacing="1.8">WIREFRAME &#183; LEAST PRIVILEGE</text>
+<line x1="40" y1="42" x2="1160" y2="42" stroke="#e2ddd3" stroke-width="1"/>
+<text x="40" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">ADMIN</text>
+<text x="40" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">18 items in the sidebar</text>
+<rect x="40" y="120" width="178" height="558" rx="10" fill="#05564c"/>
+<rect x="48" y="132" width="162" height="25" rx="5" fill="#ffffff" opacity="0.15"/>
+<rect x="48" y="132" width="3.5" height="25" rx="1.5" fill="#d16a33"/>
+<rect x="60" y="138.5" width="12" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.15"/>
+<text x="80" y="149" font-size="10.5" fill="#ffffff" font-weight="600" text-anchor="start">Dashboard</text>
+<rect x="60" y="168.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="179" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Profile</text>
+<rect x="60" y="198.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="209" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Employees</text>
+<rect x="60" y="228.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="239" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Leave</text>
+<rect x="60" y="258.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="269" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Attendance</text>
+<rect x="60" y="288.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="299" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Payslips</text>
+<rect x="60" y="318.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="329" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Payroll</text>
+<rect x="60" y="348.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="359" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Onboarding</text>
+<rect x="60" y="378.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="389" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Performance &amp; Tasks</text>
+<rect x="60" y="408.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="419" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Announcements</text>
+<rect x="60" y="438.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="449" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Documents</text>
+<rect x="60" y="468.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="479" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Assets</text>
+<rect x="60" y="498.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="509" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Finance</text>
+<rect x="60" y="528.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="539" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Internship</text>
+<rect x="60" y="558.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="569" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Report</text>
+<rect x="60" y="588.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="599" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Reports</text>
+<rect x="60" y="618.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="629" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Help &amp; Manual</text>
+<rect x="60" y="648.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="659" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Settings</text>
+<rect x="40" y="670" width="178" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<text x="234" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">HR</text>
+<text x="234" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">17 items in the sidebar</text>
+<rect x="234" y="120" width="178" height="558" rx="10" fill="#05564c"/>
+<rect x="242" y="132" width="162" height="25" rx="5" fill="#ffffff" opacity="0.15"/>
+<rect x="242" y="132" width="3.5" height="25" rx="1.5" fill="#d16a33"/>
+<rect x="254" y="138.5" width="12" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.15"/>
+<text x="274" y="149" font-size="10.5" fill="#ffffff" font-weight="600" text-anchor="start">Dashboard</text>
+<rect x="254" y="168.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="179" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Profile</text>
+<rect x="254" y="198.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="209" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Employees</text>
+<rect x="254" y="228.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="239" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Leave</text>
+<rect x="254" y="258.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="269" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Attendance</text>
+<rect x="254" y="288.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="299" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Payslips</text>
+<rect x="254" y="318.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="329" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Payroll</text>
+<rect x="254" y="348.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="359" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Onboarding</text>
+<rect x="254" y="378.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="389" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Performance &amp; Tasks</text>
+<rect x="254" y="408.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="419" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Announcements</text>
+<rect x="254" y="438.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="449" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Documents</text>
+<rect x="254" y="468.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="479" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Assets</text>
+<rect x="254" y="498.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="509" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Finance</text>
+<rect x="254" y="528.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="539" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Internship</text>
+<rect x="254" y="558.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="569" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Report</text>
+<rect x="254" y="588.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="599" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Reports</text>
+<rect x="254" y="618.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="629" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Help &amp; Manual</text>
+<rect x="242" y="642" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="234" y="670" width="178" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<text x="428" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">EMPLOYEE</text>
+<text x="428" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">11 items in the sidebar</text>
+<rect x="428" y="120" width="178" height="558" rx="10" fill="#05564c"/>
+<rect x="436" y="132" width="162" height="25" rx="5" fill="#ffffff" opacity="0.15"/>
+<rect x="436" y="132" width="3.5" height="25" rx="1.5" fill="#d16a33"/>
+<rect x="448" y="138.5" width="12" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.15"/>
+<text x="468" y="149" font-size="10.5" fill="#ffffff" font-weight="600" text-anchor="start">Dashboard</text>
+<rect x="448" y="168.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="179" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Profile</text>
+<rect x="436" y="192" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="228.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="239" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Leave</text>
+<rect x="448" y="258.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="269" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Attendance</text>
+<rect x="448" y="288.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="299" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Payslips</text>
+<rect x="436" y="312" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="436" y="342" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="378.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="389" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Performance &amp; Tasks</text>
+<rect x="448" y="408.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="419" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Announcements</text>
+<rect x="448" y="438.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="449" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Documents</text>
+<rect x="436" y="462" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="498.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="509" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Finance</text>
+<rect x="436" y="522" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="558.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="569" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Report</text>
+<rect x="436" y="582" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="618.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="629" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Help &amp; Manual</text>
+<rect x="436" y="642" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="428" y="670" width="178" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<text x="40" y="698" font-size="9.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Dashed rows are this diagram&#8217;s annotation, not the app&#8217;s: in the product the item is simply not rendered.</text>
+<text x="40" y="713" font-size="9.5" fill="#8f8a7e" font-weight="400" text-anchor="start">A nineteenth item, Grants, is reserved for a director or principal investigator and appears in none of these three.</text>
+<text x="646" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">THE HOME EACH ROLE LANDS ON</text>
+<text x="646" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">Same route, different question being answered</text>
+<text x="646" y="140" font-size="12" fill="#394a62" font-weight="700" text-anchor="start">HR / Admin</text>
+<rect x="646" y="150" width="514" height="240" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.3"/>
+<rect x="660" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="670" y="174" width="16" height="16" rx="4" fill="#e3efed"/>
+<text x="692" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Active employees</text>
+<text x="670" y="214" font-size="13" fill="#394a62" font-weight="700" text-anchor="start">24</text>
+<rect x="783" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="793" y="174" width="16" height="16" rx="4" fill="#fbeee4"/>
+<text x="815" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Pending leave</text>
+<text x="793" y="214" font-size="13" fill="#394a62" font-weight="700" text-anchor="start">3</text>
+<rect x="906" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="916" y="174" width="16" height="16" rx="4" fill="#e3efed"/>
+<text x="938" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Leave liability</text>
+<text x="916" y="214" font-size="13" fill="#394a62" font-weight="700" text-anchor="start">182</text>
+<rect x="1029" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="1039" y="174" width="16" height="16" rx="4" fill="#fbeee4"/>
+<text x="1061" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Last payroll</text>
+<text x="1039" y="214" font-size="11.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;118,400</text>
+<rect x="660" y="238" width="486" height="138" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="674" y="258" font-size="9.5" fill="#394a62" font-weight="700" text-anchor="start">Payroll cost trend</text>
+<text x="1132" y="258" font-size="8" fill="#02605b" font-weight="600" text-anchor="end">Reports &#8594;</text>
+<rect x="690" y="314.88" width="46" height="47.12" rx="3" fill="#bcd9d5"/>
+<rect x="768" y="311.84" width="46" height="50.160000000000004" rx="3" fill="#bcd9d5"/>
+<rect x="846" y="313.36" width="46" height="48.64" rx="3" fill="#bcd9d5"/>
+<rect x="924" y="302.72" width="46" height="59.28" rx="3" fill="#bcd9d5"/>
+<rect x="1002" y="299.68" width="46" height="62.31999999999999" rx="3" fill="#bcd9d5"/>
+<rect x="1080" y="289.8" width="46" height="72.2" rx="3" fill="#bcd9d5"/>
+<line x1="674" y1="362" x2="1132" y2="362" stroke="#e2ddd3" stroke-width="1"/>
+<text x="646" y="424" font-size="12" fill="#394a62" font-weight="700" text-anchor="start">Employee</text>
+<rect x="646" y="434" width="514" height="240" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.3"/>
+<rect x="660" y="448" width="154" height="82" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="672" y="462" width="14" height="14" rx="3.5" fill="#e3efed"/>
+<text x="692" y="473" font-size="8" fill="#5c6b80" font-weight="500" text-anchor="start">Annual leave left</text>
+<text x="672" y="502" font-size="14" fill="#394a62" font-weight="700" text-anchor="start">18 days</text>
+<text x="672" y="517" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">for 2026</text>
+<rect x="824" y="448" width="154" height="82" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="836" y="462" width="14" height="14" rx="3.5" fill="#e3efed"/>
+<text x="856" y="473" font-size="8" fill="#5c6b80" font-weight="500" text-anchor="start">Pending requests</text>
+<text x="836" y="502" font-size="14" fill="#394a62" font-weight="700" text-anchor="start">1</text>
+<text x="836" y="517" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">awaiting approval</text>
+<rect x="988" y="448" width="154" height="82" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="1000" y="462" width="14" height="14" rx="3.5" fill="#e3efed"/>
+<text x="1020" y="473" font-size="8" fill="#5c6b80" font-weight="500" text-anchor="start">Latest net pay</text>
+<text x="1000" y="502" font-size="14" fill="#394a62" font-weight="700" text-anchor="start">&#8373;2,178</text>
+<text x="1000" y="517" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">most recent payslip</text>
+<rect x="660" y="542" width="486" height="118" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="674" y="562" font-size="9.5" fill="#394a62" font-weight="700" text-anchor="start">My payslips</text>
+<rect x="674" y="574" width="458" height="23" rx="5" fill="#ffffff" stroke="#e2ddd3" stroke-width="1"/>
+<text x="686" y="589" font-size="8.5" fill="#394a62" font-weight="500" text-anchor="start">July 2026</text>
+<text x="986" y="589" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip</text>
+<text x="1120" y="589" font-size="8.5" fill="#394a62" font-weight="600" text-anchor="end">&#8373;2,178.35</text>
+<rect x="674" y="601" width="458" height="23" rx="5" fill="#ffffff" stroke="#e2ddd3" stroke-width="1"/>
+<text x="686" y="616" font-size="8.5" fill="#394a62" font-weight="500" text-anchor="start">June 2026</text>
+<text x="986" y="616" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip</text>
+<text x="1120" y="616" font-size="8.5" fill="#394a62" font-weight="600" text-anchor="end">&#8373;2,178.35</text>
+<rect x="674" y="628" width="458" height="23" rx="5" fill="#ffffff" stroke="#e2ddd3" stroke-width="1"/>
+<text x="686" y="643" font-size="8.5" fill="#394a62" font-weight="500" text-anchor="start">May 2026</text>
+<text x="986" y="643" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip</text>
+<text x="1120" y="643" font-size="8.5" fill="#394a62" font-weight="600" text-anchor="end">&#8373;2,094.10</text>
+<rect x="646" y="434" width="514" height="240" rx="10" fill="none" stroke="#e2ddd3" stroke-width="1.3"/>
+<rect x="646" y="700" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="646" y="726" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">An employee cannot reach Employees, Payroll, Onboarding, Assets,</text>
+<text x="646" y="741" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Internship, Reports or Settings &#8212; and is never shown that they exist.</text>
+<text x="646" y="756" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Row-Level Security in Postgres is default-deny and enforces the same</text>
+<text x="646" y="771" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">boundary, so the sidebar is not the protection: it is an honest picture of it.</text>
+<text x="646" y="786" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Their home answers three questions about one person, not twenty-four.</text>
+</svg>
+            </div>
+            <p class="wf-caption">The same app, three roles &#8212; the sidebar and the home screen both shrink to what the account is permitted to do</p>
+          </div>
+          <!-- WIREFRAMES:END -->
+
           <h2>Key Design Decisions</h2>
           <ul>
             <li><strong>Trust through verification, not assertion</strong>: The payroll engine is a pure module tested against known-good sample calculations before integration. Correctness is demonstrated, not assumed — which is the only honest posture when the output is someone's actual pay.</li>
@@ -258,6 +966,11 @@
     </div>
   </section>
 
+  <div class="wf-zoom" id="wf-zoom">
+    <button class="wf-zoom-close" id="wf-zoom-close" aria-label="Close">&times;</button>
+    <div class="wf-zoom-inner" id="wf-zoom-inner"></div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -327,5 +1040,45 @@
       });
     });
   </script>
+
+  <script>
+    // Inline wireframes: click to enlarge (they are inline SVG, not <img>,
+    // so they use the page's Montserrat rather than a fallback face).
+    document.addEventListener("DOMContentLoaded", () => {
+      const zoom = document.getElementById("wf-zoom");
+      const inner = document.getElementById("wf-zoom-inner");
+      if (!zoom) return;
+
+      function openZoom(frame) {
+        const svg = frame.querySelector("svg");
+        if (!svg) return;
+        inner.replaceChildren(svg.cloneNode(true));
+        zoom.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeZoom() {
+        zoom.classList.remove("active");
+        inner.replaceChildren();
+        document.body.style.overflow = "auto";
+      }
+
+      document.querySelectorAll(".wf-frame").forEach((frame) => {
+        frame.addEventListener("click", () => openZoom(frame));
+        frame.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openZoom(frame);
+          }
+        });
+      });
+
+      zoom.addEventListener("click", closeZoom);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && zoom.classList.contains("active")) closeZoom();
+      });
+    });
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 830" width="1200" height="830" style="font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif" role="img" aria-label="RehabTrack &#8212; session note / four states">
+<rect x="0" y="0" width="1200" height="830" rx="0" fill="#fdfcfa"/>
+<text x="40" y="28" font-size="13.5" fill="#02605b" font-weight="600" text-anchor="start" letter-spacing="2.4">REHABTRACK &#8212; SESSION NOTE / FOUR STATES</text>
+<text x="1160" y="28" font-size="12" fill="#8f8a7e" font-weight="500" text-anchor="end" letter-spacing="1.8">WIREFRAME &#183; CLINICAL RECORD</text>
+<line x1="40" y1="42" x2="1160" y2="42" stroke="#e2ddd3" stroke-width="1"/>
+<text x="40" y="82" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">A &#183; Draft &#8212; your own discipline</text>
+<rect x="40" y="96" width="540" height="268" rx="10" fill="#ffffff" stroke="#e8d7a8" stroke-width="1.4"/>
+<path d="M56 116.0 l4 4 l4 -4" fill="none" stroke="#8f8a7e" stroke-width="1.3"/>
+<rect x="74" y="110" width="38" height="17" rx="8.5" fill="#e3efed"/>
+<text x="93.0" y="121.56" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="middle">PT</text>
+<text x="122" y="123" font-size="11.5" fill="#394a62" font-weight="600" text-anchor="start">Ama Boateng</text>
+<text x="208" y="123" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">by Dr. Kwame Sakyi</text>
+<text x="444" y="123" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">45 min</text>
+<rect x="488" y="110" width="74" height="17" rx="8.5" fill="#fbf3e2"/>
+<text x="525.0" y="121.56" font-size="8.5" fill="#8a6a1e" font-weight="600" text-anchor="middle">&#9998;  Draft</text>
+<text x="84" y="146" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Spastic diplegia &#183; 6y &#183; Female &#183; GMFCS III &#183; Next: 4 Aug</text>
+<rect x="56" y="162" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="66" y="178" font-size="7.5" fill="#3a5f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">SUBJECTIVE</text>
+<text x="66" y="194" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Mother reports Ama walked to the latrine</text>
+<text x="66" y="206" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">unaided twice this week.</text>
+<rect x="318" y="162" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="328" y="178" font-size="7.5" fill="#6b4f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">OBJECTIVE</text>
+<text x="328" y="194" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">10-metre walk test 38s (was 47s).</text>
+<text x="328" y="206" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Crouch gait persists on the left.</text>
+<rect x="56" y="232" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="66" y="248" font-size="7.5" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="0.8">ASSESSMENT</text>
+<text x="66" y="264" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Improved endurance; hamstring tightness</text>
+<text x="66" y="276" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">still limiting knee extension.</text>
+<rect x="318" y="232" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="328" y="248" font-size="7.5" fill="#8a6a1e" font-weight="700" text-anchor="start" letter-spacing="0.8">PLAN</text>
+<text x="328" y="264" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Continue home programme, add prone-lying</text>
+<text x="328" y="276" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">15 min daily. Review 4 Aug.</text>
+<line x1="56" y1="312" x2="564" y2="312" stroke="#e2ddd3" stroke-width="1"/>
+<path d="M64 328 L70 338.8 L58 338.8 Z" fill="none" stroke="#8a6a1e" stroke-width="1.2"/>
+<line x1="64" y1="332.8" x2="64" y2="335.5" stroke="#8a6a1e" stroke-width="1.2"/>
+<circle cx="64" cy="337.12" r="0.8" fill="#8a6a1e"/>
+<text x="78" y="338" font-size="10" fill="#8a6a1e" font-weight="500" text-anchor="start">Pending signature</text>
+<rect x="370" y="324" width="84" height="24" rx="6" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.1"/>
+<text x="412" y="340" font-size="9" fill="#5c6b80" font-weight="600" text-anchor="middle">Edit Draft</text>
+<rect x="462" y="324" width="96" height="24" rx="6" fill="#02605b"/>
+<text x="510" y="340" font-size="9" fill="#ffffff" font-weight="600" text-anchor="middle">&#9998;  Sign Note</text>
+<text x="620" y="82" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">B &#183; Confirming the signature</text>
+<rect x="620" y="96" width="540" height="268" rx="10" fill="#ffffff" stroke="#e8d7a8" stroke-width="1.4"/>
+<path d="M636 116.0 l4 4 l4 -4" fill="none" stroke="#8f8a7e" stroke-width="1.3"/>
+<rect x="654" y="110" width="38" height="17" rx="8.5" fill="#e3efed"/>
+<text x="673.0" y="121.56" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="middle">PT</text>
+<text x="702" y="123" font-size="11.5" fill="#394a62" font-weight="600" text-anchor="start">Ama Boateng</text>
+<text x="788" y="123" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">by Dr. Kwame Sakyi</text>
+<text x="1024" y="123" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">45 min</text>
+<rect x="1068" y="110" width="74" height="17" rx="8.5" fill="#fbf3e2"/>
+<text x="1105.0" y="121.56" font-size="8.5" fill="#8a6a1e" font-weight="600" text-anchor="middle">&#9998;  Draft</text>
+<text x="664" y="146" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Spastic diplegia &#183; 6y &#183; Female &#183; GMFCS III &#183; Next: 4 Aug</text>
+<rect x="636" y="162" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="646" y="178" font-size="7.5" fill="#3a5f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">SUBJECTIVE</text>
+<text x="646" y="194" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Mother reports Ama walked to the latrine</text>
+<text x="646" y="206" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">unaided twice this week.</text>
+<rect x="898" y="162" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="908" y="178" font-size="7.5" fill="#6b4f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">OBJECTIVE</text>
+<text x="908" y="194" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">10-metre walk test 38s (was 47s).</text>
+<text x="908" y="206" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Crouch gait persists on the left.</text>
+<rect x="636" y="232" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="646" y="248" font-size="7.5" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="0.8">ASSESSMENT</text>
+<text x="646" y="264" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Improved endurance; hamstring tightness</text>
+<text x="646" y="276" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">still limiting knee extension.</text>
+<rect x="898" y="232" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="908" y="248" font-size="7.5" fill="#8a6a1e" font-weight="700" text-anchor="start" letter-spacing="0.8">PLAN</text>
+<text x="908" y="264" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Continue home programme, add prone-lying</text>
+<text x="908" y="276" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">15 min daily. Review 4 Aug.</text>
+<line x1="636" y1="312" x2="1144" y2="312" stroke="#e2ddd3" stroke-width="1"/>
+<path d="M644 328 L650 338.8 L638 338.8 Z" fill="none" stroke="#8a6a1e" stroke-width="1.2"/>
+<line x1="644" y1="332.8" x2="644" y2="335.5" stroke="#8a6a1e" stroke-width="1.2"/>
+<circle cx="644" cy="337.12" r="0.8" fill="#8a6a1e"/>
+<text x="658" y="338" font-size="10" fill="#8a6a1e" font-weight="500" text-anchor="start">Pending signature</text>
+<text x="796" y="338" font-size="9" fill="#5c6b80" font-weight="500" text-anchor="start">Sign as Dr. Kwame Sakyi (PT)?</text>
+<rect x="1006" y="324" width="100" height="24" rx="6" fill="#02605b"/>
+<text x="1056" y="340" font-size="9" fill="#ffffff" font-weight="600" text-anchor="middle">Confirm Sign</text>
+<text x="1126" y="341" font-size="13" fill="#8f8a7e" font-weight="400" text-anchor="middle">&#215;</text>
+<text x="40" y="486" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">C &#183; Signed</text>
+<rect x="40" y="500" width="540" height="268" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.4"/>
+<path d="M56 520.0 l4 4 l4 -4" fill="none" stroke="#8f8a7e" stroke-width="1.3"/>
+<rect x="74" y="514" width="38" height="17" rx="8.5" fill="#e3efed"/>
+<text x="93.0" y="525.56" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="middle">PT</text>
+<text x="122" y="527" font-size="11.5" fill="#394a62" font-weight="600" text-anchor="start">Ama Boateng</text>
+<text x="208" y="527" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">by Dr. Kwame Sakyi</text>
+<text x="444" y="527" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">45 min</text>
+<rect x="488" y="514" width="74" height="17" rx="8.5" fill="#e3efed"/>
+<text x="525.0" y="525.56" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="middle">&#10003;  Signed</text>
+<text x="84" y="550" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Spastic diplegia &#183; 6y &#183; Female &#183; GMFCS III &#183; Next: 4 Aug</text>
+<rect x="56" y="566" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="66" y="582" font-size="7.5" fill="#3a5f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">SUBJECTIVE</text>
+<text x="66" y="598" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Mother reports Ama walked to the latrine</text>
+<text x="66" y="610" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">unaided twice this week.</text>
+<rect x="318" y="566" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="328" y="582" font-size="7.5" fill="#6b4f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">OBJECTIVE</text>
+<text x="328" y="598" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">10-metre walk test 38s (was 47s).</text>
+<text x="328" y="610" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Crouch gait persists on the left.</text>
+<rect x="56" y="636" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="66" y="652" font-size="7.5" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="0.8">ASSESSMENT</text>
+<text x="66" y="668" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Improved endurance; hamstring tightness</text>
+<text x="66" y="680" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">still limiting knee extension.</text>
+<rect x="318" y="636" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="328" y="652" font-size="7.5" fill="#8a6a1e" font-weight="700" text-anchor="start" letter-spacing="0.8">PLAN</text>
+<text x="328" y="668" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Continue home programme, add prone-lying</text>
+<text x="328" y="680" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">15 min daily. Review 4 Aug.</text>
+<line x1="56" y1="716" x2="564" y2="716" stroke="#e2ddd3" stroke-width="1"/>
+<circle cx="64" cy="738" r="6.5" fill="none" stroke="#02605b" stroke-width="1.2"/>
+<path d="M61 738 l2.2 2.4 l4 -4.8" fill="none" stroke="#02605b" stroke-width="1.4" stroke-linecap="round"/>
+<text x="78" y="742" font-size="10" fill="#02605b" font-weight="600" text-anchor="start">Signed by Dr. Kwame Sakyi (PT)</text>
+<text x="286" y="742" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">28 Jul 2026, 14:32</text>
+<text x="620" y="486" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">D &#183; Another discipline&#8217;s draft</text>
+<rect x="620" y="500" width="540" height="268" rx="10" fill="#ffffff" stroke="#e8d7a8" stroke-width="1.4"/>
+<path d="M636 520.0 l4 4 l4 -4" fill="none" stroke="#8f8a7e" stroke-width="1.3"/>
+<rect x="654" y="514" width="38" height="17" rx="8.5" fill="#efe9f5"/>
+<text x="673.0" y="525.56" font-size="8.5" fill="#6b4f8a" font-weight="600" text-anchor="middle">SLP</text>
+<text x="702" y="527" font-size="11.5" fill="#394a62" font-weight="600" text-anchor="start">Ama Boateng</text>
+<text x="788" y="527" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">by A. Mensah, SLP</text>
+<text x="1024" y="527" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">45 min</text>
+<rect x="1068" y="514" width="74" height="17" rx="8.5" fill="#fbf3e2"/>
+<text x="1105.0" y="525.56" font-size="8.5" fill="#8a6a1e" font-weight="600" text-anchor="middle">&#9998;  Draft</text>
+<text x="664" y="550" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Spastic diplegia &#183; 6y &#183; Female &#183; GMFCS III &#183; Next: 4 Aug</text>
+<rect x="636" y="566" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="646" y="582" font-size="7.5" fill="#3a5f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">SUBJECTIVE</text>
+<text x="646" y="598" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">Mother reports Ama walked to the latrine</text>
+<text x="646" y="610" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">unaided twice this week.</text>
+<rect x="898" y="566" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="908" y="582" font-size="7.5" fill="#6b4f8a" font-weight="700" text-anchor="start" letter-spacing="0.8">OBJECTIVE</text>
+<text x="908" y="598" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">10-metre walk test 38s (was 47s).</text>
+<text x="908" y="610" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">Crouch gait persists on the left.</text>
+<rect x="636" y="636" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="646" y="652" font-size="7.5" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="0.8">ASSESSMENT</text>
+<text x="646" y="668" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">Improved endurance; hamstring tightness</text>
+<text x="646" y="680" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">still limiting knee extension.</text>
+<rect x="898" y="636" width="246" height="62" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="908" y="652" font-size="7.5" fill="#8a6a1e" font-weight="700" text-anchor="start" letter-spacing="0.8">PLAN</text>
+<text x="908" y="668" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">Continue home programme, add prone-lying</text>
+<text x="908" y="680" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">15 min daily. Review 4 Aug.</text>
+<line x1="636" y1="716" x2="1144" y2="716" stroke="#e2ddd3" stroke-width="1"/>
+<path d="M644 732 L650 742.8 L638 742.8 Z" fill="none" stroke="#8a6a1e" stroke-width="1.2"/>
+<line x1="644" y1="736.8" x2="644" y2="739.5" stroke="#8a6a1e" stroke-width="1.2"/>
+<circle cx="644" cy="741.12" r="0.8" fill="#8a6a1e"/>
+<text x="658" y="742" font-size="10" fill="#8a6a1e" font-weight="500" text-anchor="start">Pending signature</text>
+<rect x="1050" y="729" width="90" height="21" rx="10.5" fill="#f4f1eb" stroke="#e2ddd3" stroke-width="1"/>
+<text x="1095.0" y="742.56" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="middle">view only</text>
+<rect x="40" y="374" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="40" y="396" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">The only state that carries actions. The amber border and chip mark a record that is not yet</text>
+<text x="40" y="411" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">clinically or legally complete &#8212; and the same pair shows up on the dashboard and in Admin.</text>
+<rect x="620" y="374" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="620" y="396" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Signing is a named, credentialed act, so the confirmation restates who is about to sign before</text>
+<text x="620" y="411" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">anything is committed. One deliberate step between writing a note and standing behind it.</text>
+<rect x="40" y="778" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="40" y="800" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Final and attributed: name, credential, timestamp. Editing ends here &#8212; a correction is a new note.</text>
+<rect x="620" y="778" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="620" y="800" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">The same draft read by a therapist from another discipline. Row-Level Security in Postgres, not the</text>
+<text x="620" y="815" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">interface, is what makes it read-only &#8212; the UI only declines to offer what the database would refuse.</text>
+</svg>

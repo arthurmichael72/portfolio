@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" style="font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif" role="img" aria-label="CLCD-HRMS &#8212; the same app, three roles">
+<rect x="0" y="0" width="1200" height="800" rx="0" fill="#fdfcfa"/>
+<text x="40" y="28" font-size="13.5" fill="#02605b" font-weight="600" text-anchor="start" letter-spacing="2.4">CLCD-HRMS &#8212; THE SAME APP, THREE ROLES</text>
+<text x="1160" y="28" font-size="12" fill="#8f8a7e" font-weight="500" text-anchor="end" letter-spacing="1.8">WIREFRAME &#183; LEAST PRIVILEGE</text>
+<line x1="40" y1="42" x2="1160" y2="42" stroke="#e2ddd3" stroke-width="1"/>
+<text x="40" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">ADMIN</text>
+<text x="40" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">18 items in the sidebar</text>
+<rect x="40" y="120" width="178" height="558" rx="10" fill="#05564c"/>
+<rect x="48" y="132" width="162" height="25" rx="5" fill="#ffffff" opacity="0.15"/>
+<rect x="48" y="132" width="3.5" height="25" rx="1.5" fill="#d16a33"/>
+<rect x="60" y="138.5" width="12" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.15"/>
+<text x="80" y="149" font-size="10.5" fill="#ffffff" font-weight="600" text-anchor="start">Dashboard</text>
+<rect x="60" y="168.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="179" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Profile</text>
+<rect x="60" y="198.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="209" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Employees</text>
+<rect x="60" y="228.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="239" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Leave</text>
+<rect x="60" y="258.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="269" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Attendance</text>
+<rect x="60" y="288.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="299" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Payslips</text>
+<rect x="60" y="318.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="329" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Payroll</text>
+<rect x="60" y="348.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="359" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Onboarding</text>
+<rect x="60" y="378.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="389" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Performance &amp; Tasks</text>
+<rect x="60" y="408.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="419" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Announcements</text>
+<rect x="60" y="438.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="449" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Documents</text>
+<rect x="60" y="468.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="479" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Assets</text>
+<rect x="60" y="498.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="509" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Finance</text>
+<rect x="60" y="528.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="539" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Internship</text>
+<rect x="60" y="558.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="569" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Report</text>
+<rect x="60" y="588.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="599" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Reports</text>
+<rect x="60" y="618.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="629" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Help &amp; Manual</text>
+<rect x="60" y="648.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="80" y="659" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Settings</text>
+<rect x="40" y="670" width="178" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<text x="234" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">HR</text>
+<text x="234" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">17 items in the sidebar</text>
+<rect x="234" y="120" width="178" height="558" rx="10" fill="#05564c"/>
+<rect x="242" y="132" width="162" height="25" rx="5" fill="#ffffff" opacity="0.15"/>
+<rect x="242" y="132" width="3.5" height="25" rx="1.5" fill="#d16a33"/>
+<rect x="254" y="138.5" width="12" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.15"/>
+<text x="274" y="149" font-size="10.5" fill="#ffffff" font-weight="600" text-anchor="start">Dashboard</text>
+<rect x="254" y="168.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="179" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Profile</text>
+<rect x="254" y="198.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="209" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Employees</text>
+<rect x="254" y="228.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="239" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Leave</text>
+<rect x="254" y="258.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="269" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Attendance</text>
+<rect x="254" y="288.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="299" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Payslips</text>
+<rect x="254" y="318.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="329" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Payroll</text>
+<rect x="254" y="348.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="359" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Onboarding</text>
+<rect x="254" y="378.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="389" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Performance &amp; Tasks</text>
+<rect x="254" y="408.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="419" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Announcements</text>
+<rect x="254" y="438.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="449" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Documents</text>
+<rect x="254" y="468.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="479" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Assets</text>
+<rect x="254" y="498.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="509" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Finance</text>
+<rect x="254" y="528.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="539" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Internship</text>
+<rect x="254" y="558.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="569" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Report</text>
+<rect x="254" y="588.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="599" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Reports</text>
+<rect x="254" y="618.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="274" y="629" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Help &amp; Manual</text>
+<rect x="242" y="642" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="234" y="670" width="178" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<text x="428" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">EMPLOYEE</text>
+<text x="428" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">11 items in the sidebar</text>
+<rect x="428" y="120" width="178" height="558" rx="10" fill="#05564c"/>
+<rect x="436" y="132" width="162" height="25" rx="5" fill="#ffffff" opacity="0.15"/>
+<rect x="436" y="132" width="3.5" height="25" rx="1.5" fill="#d16a33"/>
+<rect x="448" y="138.5" width="12" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.15"/>
+<text x="468" y="149" font-size="10.5" fill="#ffffff" font-weight="600" text-anchor="start">Dashboard</text>
+<rect x="448" y="168.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="179" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Profile</text>
+<rect x="436" y="192" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="228.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="239" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Leave</text>
+<rect x="448" y="258.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="269" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Attendance</text>
+<rect x="448" y="288.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="299" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Payslips</text>
+<rect x="436" y="312" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="436" y="342" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="378.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="389" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Performance &amp; Tasks</text>
+<rect x="448" y="408.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="419" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Announcements</text>
+<rect x="448" y="438.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="449" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Documents</text>
+<rect x="436" y="462" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="498.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="509" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Finance</text>
+<rect x="436" y="522" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="558.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="569" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">My Report</text>
+<rect x="436" y="582" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="448" y="618.5" width="12" height="12" rx="3" fill="none" stroke="#cfe0da" stroke-width="1.15"/>
+<text x="468" y="629" font-size="10.5" fill="#cfe0da" font-weight="400" text-anchor="start">Help &amp; Manual</text>
+<rect x="436" y="642" width="162" height="25" rx="5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.13" stroke-dasharray="3 4"/>
+<rect x="428" y="670" width="178" height="1" rx="0" fill="#ffffff" opacity="0.22"/>
+<text x="40" y="698" font-size="9.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Dashed rows are this diagram&#8217;s annotation, not the app&#8217;s: in the product the item is simply not rendered.</text>
+<text x="40" y="713" font-size="9.5" fill="#8f8a7e" font-weight="400" text-anchor="start">A nineteenth item, Grants, is reserved for a director or principal investigator and appears in none of these three.</text>
+<text x="646" y="86" font-size="12" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="1.6">THE HOME EACH ROLE LANDS ON</text>
+<text x="646" y="102" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">Same route, different question being answered</text>
+<text x="646" y="140" font-size="12" fill="#394a62" font-weight="700" text-anchor="start">HR / Admin</text>
+<rect x="646" y="150" width="514" height="240" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.3"/>
+<rect x="660" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="670" y="174" width="16" height="16" rx="4" fill="#e3efed"/>
+<text x="692" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Active employees</text>
+<text x="670" y="214" font-size="13" fill="#394a62" font-weight="700" text-anchor="start">24</text>
+<rect x="783" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="793" y="174" width="16" height="16" rx="4" fill="#fbeee4"/>
+<text x="815" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Pending leave</text>
+<text x="793" y="214" font-size="13" fill="#394a62" font-weight="700" text-anchor="start">3</text>
+<rect x="906" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="916" y="174" width="16" height="16" rx="4" fill="#e3efed"/>
+<text x="938" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Leave liability</text>
+<text x="916" y="214" font-size="13" fill="#394a62" font-weight="700" text-anchor="start">182</text>
+<rect x="1029" y="164" width="113" height="62" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="1039" y="174" width="16" height="16" rx="4" fill="#fbeee4"/>
+<text x="1061" y="186" font-size="7.5" fill="#5c6b80" font-weight="500" text-anchor="start">Last payroll</text>
+<text x="1039" y="214" font-size="11.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;118,400</text>
+<rect x="660" y="238" width="486" height="138" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="674" y="258" font-size="9.5" fill="#394a62" font-weight="700" text-anchor="start">Payroll cost trend</text>
+<text x="1132" y="258" font-size="8" fill="#02605b" font-weight="600" text-anchor="end">Reports &#8594;</text>
+<rect x="690" y="314.88" width="46" height="47.12" rx="3" fill="#bcd9d5"/>
+<rect x="768" y="311.84" width="46" height="50.160000000000004" rx="3" fill="#bcd9d5"/>
+<rect x="846" y="313.36" width="46" height="48.64" rx="3" fill="#bcd9d5"/>
+<rect x="924" y="302.72" width="46" height="59.28" rx="3" fill="#bcd9d5"/>
+<rect x="1002" y="299.68" width="46" height="62.31999999999999" rx="3" fill="#bcd9d5"/>
+<rect x="1080" y="289.8" width="46" height="72.2" rx="3" fill="#bcd9d5"/>
+<line x1="674" y1="362" x2="1132" y2="362" stroke="#e2ddd3" stroke-width="1"/>
+<text x="646" y="424" font-size="12" fill="#394a62" font-weight="700" text-anchor="start">Employee</text>
+<rect x="646" y="434" width="514" height="240" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.3"/>
+<rect x="660" y="448" width="154" height="82" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="672" y="462" width="14" height="14" rx="3.5" fill="#e3efed"/>
+<text x="692" y="473" font-size="8" fill="#5c6b80" font-weight="500" text-anchor="start">Annual leave left</text>
+<text x="672" y="502" font-size="14" fill="#394a62" font-weight="700" text-anchor="start">18 days</text>
+<text x="672" y="517" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">for 2026</text>
+<rect x="824" y="448" width="154" height="82" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="836" y="462" width="14" height="14" rx="3.5" fill="#e3efed"/>
+<text x="856" y="473" font-size="8" fill="#5c6b80" font-weight="500" text-anchor="start">Pending requests</text>
+<text x="836" y="502" font-size="14" fill="#394a62" font-weight="700" text-anchor="start">1</text>
+<text x="836" y="517" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">awaiting approval</text>
+<rect x="988" y="448" width="154" height="82" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="1000" y="462" width="14" height="14" rx="3.5" fill="#e3efed"/>
+<text x="1020" y="473" font-size="8" fill="#5c6b80" font-weight="500" text-anchor="start">Latest net pay</text>
+<text x="1000" y="502" font-size="14" fill="#394a62" font-weight="700" text-anchor="start">&#8373;2,178</text>
+<text x="1000" y="517" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">most recent payslip</text>
+<rect x="660" y="542" width="486" height="118" rx="8" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="674" y="562" font-size="9.5" fill="#394a62" font-weight="700" text-anchor="start">My payslips</text>
+<rect x="674" y="574" width="458" height="23" rx="5" fill="#ffffff" stroke="#e2ddd3" stroke-width="1"/>
+<text x="686" y="589" font-size="8.5" fill="#394a62" font-weight="500" text-anchor="start">July 2026</text>
+<text x="986" y="589" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip</text>
+<text x="1120" y="589" font-size="8.5" fill="#394a62" font-weight="600" text-anchor="end">&#8373;2,178.35</text>
+<rect x="674" y="601" width="458" height="23" rx="5" fill="#ffffff" stroke="#e2ddd3" stroke-width="1"/>
+<text x="686" y="616" font-size="8.5" fill="#394a62" font-weight="500" text-anchor="start">June 2026</text>
+<text x="986" y="616" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip</text>
+<text x="1120" y="616" font-size="8.5" fill="#394a62" font-weight="600" text-anchor="end">&#8373;2,178.35</text>
+<rect x="674" y="628" width="458" height="23" rx="5" fill="#ffffff" stroke="#e2ddd3" stroke-width="1"/>
+<text x="686" y="643" font-size="8.5" fill="#394a62" font-weight="500" text-anchor="start">May 2026</text>
+<text x="986" y="643" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip</text>
+<text x="1120" y="643" font-size="8.5" fill="#394a62" font-weight="600" text-anchor="end">&#8373;2,094.10</text>
+<rect x="646" y="434" width="514" height="240" rx="10" fill="none" stroke="#e2ddd3" stroke-width="1.3"/>
+<rect x="646" y="700" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="646" y="726" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">An employee cannot reach Employees, Payroll, Onboarding, Assets,</text>
+<text x="646" y="741" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Internship, Reports or Settings &#8212; and is never shown that they exist.</text>
+<text x="646" y="756" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Row-Level Security in Postgres is default-deny and enforces the same</text>
+<text x="646" y="771" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">boundary, so the sidebar is not the protection: it is an honest picture of it.</text>
+<text x="646" y="786" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Their home answers three questions about one person, not twenty-four.</text>
+</svg>

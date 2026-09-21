@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" style="font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif" role="img" aria-label="CLCD-HRMS &#8212; pay run / payslip">
+<rect x="0" y="0" width="1200" height="900" rx="0" fill="#fdfcfa"/>
+<text x="40" y="28" font-size="13.5" fill="#02605b" font-weight="600" text-anchor="start" letter-spacing="2.4">CLCD-HRMS &#8212; PAY RUN / PAYSLIP</text>
+<text x="1160" y="28" font-size="12" fill="#8f8a7e" font-weight="500" text-anchor="end" letter-spacing="1.8">WIREFRAME &#183; STATUTORY PAYROLL</text>
+<line x1="40" y1="42" x2="1160" y2="42" stroke="#e2ddd3" stroke-width="1"/>
+<text x="40" y="82" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">A &#183; Pay run &#8212; draft, and offline</text>
+<rect x="40" y="96" width="690" height="452" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.4"/>
+<rect x="40" y="96" width="690" height="452" rx="10" fill="#fbfaf7"/>
+<rect x="40" y="96" width="690" height="452" rx="10" fill="none" stroke="#e2ddd3" stroke-width="1.4"/>
+<text x="62" y="122" font-size="9" fill="#02605b" font-weight="600" text-anchor="start">&#8592; Back to payroll</text>
+<text x="62" y="152" font-size="19" fill="#394a62" font-weight="700" text-anchor="start">July 2026</text>
+<rect x="158" y="138" width="58" height="20" rx="10.0" fill="#fbf3e2"/>
+<text x="187.0" y="151.24" font-size="9" fill="#8a6a1e" font-weight="600" text-anchor="middle">draft</text>
+<text x="62" y="170" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">Rates</text>
+<text x="92" y="170" font-size="9" fill="#5c6b80" font-weight="500" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace">2026-v1</text>
+<rect x="426" y="134" width="96" height="26" rx="6" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.1"/>
+<text x="474" y="151" font-size="9" fill="#5c6b80" font-weight="600" text-anchor="middle">Export CSV</text>
+<rect x="530" y="134" width="90" height="26" rx="6" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.1" opacity="0.55"/>
+<text x="575" y="151" font-size="9" fill="#8f8a7e" font-weight="600" text-anchor="middle">Regenerate</text>
+<rect x="628" y="134" width="80" height="26" rx="6" fill="#9fc0b8"/>
+<text x="668" y="151" font-size="9" fill="#ffffff" font-weight="700" text-anchor="middle">Finalise</text>
+<rect x="62" y="184" width="646" height="34" rx="7" fill="#fbeee4" stroke="#eecfba" stroke-width="1.1"/>
+<path d="M78 195 a 6.5 6.5 0 0 1 10 0" fill="none" stroke="#d16a33" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M80.4 198.3 a 3.7 3.7 0 0 1 5.2 0" fill="none" stroke="#d16a33" stroke-width="1.3" stroke-linecap="round"/>
+<circle cx="83" cy="201.8" r="1.2" fill="#d16a33"/>
+<path d="M76 204 L90 190" fill="none" stroke="#d16a33" stroke-width="1.4" stroke-linecap="round"/>
+<text x="100" y="205" font-size="9.5" fill="#9a4f22" font-weight="500" text-anchor="start">You&#8217;re offline &#8212; generating and finalising are disabled until you reconnect.</text>
+<rect x="62" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="74" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Employees</text>
+<text x="74" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">24</text>
+<rect x="226" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="238" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Gross</text>
+<text x="238" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;118,400</text>
+<rect x="390" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="402" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">PAYE (GRA)</text>
+<text x="402" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;19,842</text>
+<rect x="554" y="230" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="566" y="248" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">SSNIT employee</text>
+<text x="566" y="267" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;5,676</text>
+<rect x="62" y="288" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="74" y="306" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">SSNIT employer</text>
+<text x="74" y="325" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;13,416</text>
+<rect x="226" y="288" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="238" y="306" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Tier 2</text>
+<text x="238" y="325" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;5,160</text>
+<rect x="390" y="288" width="154" height="50" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<text x="402" y="306" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Net pay</text>
+<text x="402" y="325" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">&#8373;92,882</text>
+<rect x="62" y="352" width="646" height="176" rx="8" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.1"/>
+<rect x="62" y="352" width="646" height="26" rx="8" fill="#f4f1eb"/>
+<rect x="62" y="370" width="646" height="8" rx="0" fill="#f4f1eb"/>
+<text x="78" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="start" letter-spacing="0.4">Employee</text>
+<text x="308" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Basic</text>
+<text x="396" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Gross</text>
+<text x="476" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">SSNIT</text>
+<text x="556" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">PAYE</text>
+<text x="636" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Net</text>
+<text x="690" y="369" font-size="8" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Actions</text>
+<text x="78" y="397" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Kwame Sakyi</text>
+<text x="308" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">4,800</text>
+<text x="396" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">5,400</text>
+<text x="476" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">264</text>
+<text x="556" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">883</text>
+<text x="636" y="397" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">4,254</text>
+<text x="660" y="397" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="397" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<rect x="62" y="407" width="646" height="29" rx="0" fill="#fcfbf9"/>
+<text x="78" y="426" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Akosua Frimpong</text>
+<text x="308" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">3,600</text>
+<text x="396" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">4,050</text>
+<text x="476" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">198</text>
+<text x="556" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">565</text>
+<text x="636" y="426" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">3,287</text>
+<text x="660" y="426" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="426" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<text x="78" y="455" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Yaw Darko</text>
+<text x="308" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,900</text>
+<text x="396" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">3,200</text>
+<text x="476" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">160</text>
+<text x="556" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">423</text>
+<text x="636" y="455" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,618</text>
+<text x="660" y="455" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="455" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<rect x="62" y="465" width="646" height="29" rx="0" fill="#fcfbf9"/>
+<text x="78" y="484" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Abena Owusu</text>
+<text x="308" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,400</text>
+<text x="396" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,640</text>
+<text x="476" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">132</text>
+<text x="556" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">330</text>
+<text x="636" y="484" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,178</text>
+<text x="660" y="484" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="484" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<text x="78" y="513" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Kojo Baffour</text>
+<text x="308" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">1,850</text>
+<text x="396" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">2,000</text>
+<text x="476" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">102</text>
+<text x="556" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">223</text>
+<text x="636" y="513" font-size="9" fill="#5c6b80" font-weight="400" text-anchor="end">1,675</text>
+<text x="660" y="513" font-size="8.5" fill="#02605b" font-weight="600" text-anchor="start">View</text>
+<text x="690" y="513" font-size="8.5" fill="#8f8a7e" font-weight="600" text-anchor="start">Adjust</text>
+<text x="750" y="82" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">B &#183; Payslip &#8212; the working, shown</text>
+<rect x="750" y="96" width="410" height="640" rx="10" fill="#ffffff" stroke="#e2ddd3" stroke-width="1.4"/>
+<text x="770" y="124" font-size="13" fill="#02605b" font-weight="700" text-anchor="start">CLCD Ghana</text>
+<text x="770" y="138" font-size="8.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Payslip &#183; July 2026</text>
+<text x="1140" y="122" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="end">Rates version</text>
+<text x="1140" y="136" font-size="9" fill="#5c6b80" font-weight="500" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace">2026-v1</text>
+<line x1="770" y1="150" x2="1140" y2="150" stroke="#e2ddd3" stroke-width="1"/>
+<text x="770" y="170" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Employee</text>
+<text x="770" y="182" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">Kwame Sakyi</text>
+<text x="960" y="170" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Staff ID</text>
+<text x="960" y="182" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">CLCD-014</text>
+<text x="770" y="200" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">Ghana Card</text>
+<text x="770" y="212" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">GHA-7248-3</text>
+<text x="960" y="200" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">SSNIT No.</text>
+<text x="960" y="212" font-size="9" fill="#394a62" font-weight="500" text-anchor="start">C0134928</text>
+<line x1="770" y1="238" x2="1140" y2="238" stroke="#e2ddd3" stroke-width="1"/>
+<text x="770" y="260" font-size="8" fill="#02605b" font-weight="700" text-anchor="start" letter-spacing="0.7">EARNINGS</text>
+<text x="770" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Basic salary</text>
+<text x="940" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">4,800.00</text>
+<text x="770" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Allowances</text>
+<text x="940" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">600.00</text>
+<text x="770" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Overtime</text>
+<text x="940" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">0.00</text>
+<text x="770" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="start">Gross pay</text>
+<text x="940" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="end">5,400.00</text>
+<line x1="770" y1="315" x2="940" y2="315" stroke="#e2ddd3" stroke-width="1"/>
+<text x="968" y="260" font-size="8" fill="#d16a33" font-weight="700" text-anchor="start" letter-spacing="0.7">DEDUCTIONS</text>
+<text x="968" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">SSNIT (employee 5.5%)</text>
+<text x="1120" y="278" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">264.00</text>
+<text x="968" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">PAYE (income tax)</text>
+<text x="1120" y="294" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">882.50</text>
+<text x="968" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="start">Loan / advance</text>
+<text x="1120" y="310" font-size="8.5" fill="#6f6a60" font-weight="400" text-anchor="end">0.00</text>
+<text x="968" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="start">Total deductions</text>
+<text x="1120" y="326" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="end">1,146.50</text>
+<line x1="968" y1="315" x2="1120" y2="315" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="770" y="342" width="370" height="32" rx="6" fill="#e3efed"/>
+<text x="782" y="362" font-size="10.5" fill="#02605b" font-weight="700" text-anchor="start">Net pay</text>
+<text x="1128" y="362" font-size="13" fill="#02605b" font-weight="700" text-anchor="end">&#8373;4,253.50</text>
+<text x="770" y="396" font-size="8" fill="#5c6b80" font-weight="700" text-anchor="start" letter-spacing="0.7">HOW THE PAYE WAS REACHED</text>
+<text x="770" y="410" font-size="8" fill="#8f8a7e" font-weight="400" text-anchor="start">Taxable income = gross &#8722; SSNIT employee = &#8373;5,136.00</text>
+<rect x="770" y="420" width="370" height="133" rx="7" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="782" y="438" font-size="7.5" fill="#8f8a7e" font-weight="600" text-anchor="start" letter-spacing="0.4">Band</text>
+<text x="968" y="438" font-size="7.5" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Rate</text>
+<text x="1128" y="438" font-size="7.5" fill="#8f8a7e" font-weight="600" text-anchor="end" letter-spacing="0.4">Tax</text>
+<text x="782" y="456" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">First 490</text>
+<text x="968" y="456" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">0%</text>
+<text x="1128" y="456" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">0.00</text>
+<text x="782" y="473" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 110</text>
+<text x="968" y="473" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">5%</text>
+<text x="1128" y="473" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">5.50</text>
+<text x="782" y="490" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 130</text>
+<text x="968" y="490" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">10%</text>
+<text x="1128" y="490" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">13.00</text>
+<text x="782" y="507" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 3,166.67</text>
+<text x="968" y="507" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">17.5%</text>
+<text x="1128" y="507" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">554.17</text>
+<text x="782" y="524" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="start">Next 1,239.33</text>
+<text x="968" y="524" font-size="8" fill="#6f6a60" font-weight="400" text-anchor="end">25%</text>
+<text x="1128" y="524" font-size="8" fill="#394a62" font-weight="500" text-anchor="end">309.83</text>
+<line x1="782" y1="536" x2="1128" y2="536" stroke="#e2ddd3" stroke-width="1"/>
+<text x="782" y="551" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="start">PAYE total</text>
+<text x="1128" y="551" font-size="8.5" fill="#394a62" font-weight="700" text-anchor="end">882.50</text>
+<text x="770" y="566" font-size="8" fill="#5c6b80" font-weight="700" text-anchor="start" letter-spacing="0.7">SSNIT PENSION CONTRIBUTIONS</text>
+<text x="770" y="584" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Employee (5.5%, deducted above)</text>
+<text x="1140" y="584" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">264.00</text>
+<text x="770" y="599" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Employer (13%, paid by CLCD &#8212; not deducted from you)</text>
+<text x="1140" y="599" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">624.00</text>
+<text x="770" y="614" font-size="7.5" fill="#394a62" font-weight="600" text-anchor="start">Total (18.5% of basic)</text>
+<text x="1140" y="614" font-size="7.5" fill="#394a62" font-weight="600" text-anchor="end">888.00</text>
+<line x1="770" y1="636" x2="1140" y2="636" stroke="#e2ddd3" stroke-width="1"/>
+<text x="770" y="652" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Tier 1 &#8212; SSNIT (13.5%)</text>
+<text x="1140" y="652" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">648.00</text>
+<text x="770" y="667" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="start">Tier 2 &#8212; approved trustee (5%)</text>
+<text x="1140" y="667" font-size="7.5" fill="#6f6a60" font-weight="400" text-anchor="end">240.00</text>
+<rect x="770" y="674" width="370" height="34" rx="6" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1"/>
+<text x="782" y="688" font-size="7.5" fill="#8f8a7e" font-weight="500" text-anchor="start">NHIL (2.5%) is an employer levy in Ghana.</text>
+<text x="782" y="699" font-size="7.5" fill="#8f8a7e" font-weight="400" text-anchor="start">It is reported as an employer cost, never as your deduction.</text>
+<text x="40" y="602" font-size="13.5" fill="#394a62" font-weight="700" text-anchor="start">C &#183; The same run, finalised</text>
+<rect x="40" y="616" width="690" height="112" rx="10" fill="#fbfaf7" stroke="#e2ddd3" stroke-width="1.4"/>
+<text x="62" y="650" font-size="19" fill="#394a62" font-weight="700" text-anchor="start">July 2026</text>
+<rect x="158" y="636" width="74" height="20" rx="10.0" fill="#e3efed"/>
+<text x="195.0" y="649.24" font-size="9" fill="#02605b" font-weight="600" text-anchor="middle">finalised</text>
+<text x="62" y="668" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">Rates</text>
+<text x="92" y="668" font-size="9" fill="#5c6b80" font-weight="500" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace">2026-v1</text>
+<text x="144" y="668" font-size="9" fill="#8f8a7e" font-weight="400" text-anchor="start">&#183; Finalised 31 Jul 2026, 16:20 by Kwame Sakyi</text>
+<rect x="612" y="632" width="96" height="26" rx="6" fill="#ffffff" stroke="#cfc9bd" stroke-width="1.1"/>
+<text x="660" y="649" font-size="9" fill="#5c6b80" font-weight="600" text-anchor="middle">Export CSV</text>
+<rect x="62" y="684" width="646" height="28" rx="6" fill="#f4f1eb" stroke="#e2ddd3" stroke-width="1"/>
+<rect x="78" y="692" width="9" height="7" rx="1.5" fill="none" stroke="#8f8a7e" stroke-width="1.2"/>
+<path d="M80 692 a 2.5 3 0 0 1 5 0" fill="none" stroke="#8f8a7e" stroke-width="1.2"/>
+<text x="94" y="702" font-size="9" fill="#5c6b80" font-weight="500" text-anchor="start">This pay run is finalised and locked. Generate, Adjust and Delete are gone &#8212; not disabled.</text>
+<rect x="40" y="764" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="40" y="786" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">Every figure is produced by a pure calculation module that was tested against known-good sample employees before it</text>
+<text x="40" y="801" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">was wired to a screen. The run pins its rates version, so a payslip issued today still reconciles after the bands move.</text>
+<rect x="750" y="764" width="26" height="2" rx="1" fill="#9f1c20"/>
+<text x="750" y="786" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">A payslip that shows its working. The band table is</text>
+<text x="750" y="801" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">not decoration: it is how a non-specialist checks the</text>
+<text x="750" y="816" font-size="10" fill="#6f6a60" font-weight="400" text-anchor="start">number, and how an employee can see it is right.</text>
+</svg>
